@@ -1,0 +1,17 @@
+test_cli_commands (test_csvio.CSVTests.test_cli_commands) ... ok
+test_grouping_and_line_order (test_csvio.CSVTests.test_grouping_and_line_order) ... ok
+test_header_only_and_blank_rows (test_csvio.CSVTests.test_header_only_and_blank_rows) ... ok
+test_invalid_headers (test_csvio.CSVTests.test_invalid_headers) ... ok
+test_invalid_numbers (test_csvio.CSVTests.test_invalid_numbers) ... ok
+test_invalid_rows (test_csvio.CSVTests.test_invalid_rows) ... ok
+test_quoted_commas_newlines_and_escaped_quotes (test_csvio.CSVTests.test_quoted_commas_newlines_and_escaped_quotes) ... ok
+test_reordered_trimmed_headers_cells_and_zero (test_csvio.CSVTests.test_reordered_trimmed_headers_cells_and_zero) ... ok
+test_default_quantity (test_existing.ExistingTests.test_default_quantity) ... ok
+test_invalid_discount (test_existing.ExistingTests.test_invalid_discount) ... ok
+test_list_report (test_existing.ExistingTests.test_list_report) ... ok
+test_regular_total (test_existing.ExistingTests.test_regular_total) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.070s
+
+OK

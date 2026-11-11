@@ -1,0 +1,63 @@
+[
+  {
+    "id": "msg_1c89ebf3a001q3ppMlOMRKTFjX",
+    "time": {
+      "created": 1794367211185
+    },
+    "text": "Reply exactly BENCHMARK_READY. Do not call tools.",
+    "type": "user"
+  },
+  {
+    "id": "msg_1c89ec6b9001yg3vuasgkOB1Kf",
+    "time": {
+      "created": 1794367211197,
+      "streamed": 1794367216576,
+      "completed": 1794367216584
+    },
+    "type": "assistant",
+    "agent": "build",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "medium"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "BENCHMARK_READY",
+        "native": {
+          "itemId": "msg_03901e395b98e38d016af3def01fa087d0a27b0027c3740cb8",
+          "phase": "final_answer"
+        }
+      }
+    ],
+    "snapshot": {
+      "start": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "end": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+      "files": []
+    },
+    "finish": "stop",
+    "native": {
+      "responseId": "resp_03901e395b98e38d016af3deee7fc887d0b413e17bc8c4adaf",
+      "serviceTier": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 2422,
+      "output": 8,
+      "reasoning": 0,
+      "cache": {
+        "read": 2048,
+        "write": 0
+      }
+    }
+  },
+  {
+    "id": "msg_1c89edbcb001w5iJGop0dhoZGd",
+    "time": {
+      "created": 1794367216587
+    },
+    "type": "idle",
+    "outcome": "succeeded"
+  }
+]

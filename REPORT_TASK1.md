@@ -1,6 +1,6 @@
 # Báo cáo tìm hiểu AI Coding Agent và OpenCode
 
-Báo cáo tập trung vào hai câu hỏi. Một AI coding agent đi từ yêu cầu bằng ngôn ngữ tự nhiên đến thay đổi có thể kiểm tra trong repository như thế nào? OpenCode tổ chức các thành phần thực hiện công việc đó ra sao? Phần dưới đây tổng hợp tài liệu kỹ thuật và đọc mã nguồn. Cài đặt, cấu hình model và thực nghiệm trên dự án nhỏ sẽ được thực hiện ở giai đoạn sau.
+Báo cáo trình bày cách AI coding agent xử lý một nhiệm vụ lập trình và phân tích OpenCode qua các thành phần chính như vòng lặp agent, công cụ, ngữ cảnh và quyền thực thi. Nội dung dựa trên tài liệu kỹ thuật và mã nguồn tại các commit được dẫn kèm. Phần cài đặt, so sánh phiên bản và thực nghiệm được trình bày trong [Báo cáo 2](REPORT_TASK2.md).
 
 ## 1. AI Coding Agent
 
@@ -63,7 +63,7 @@ Các tool tích hợp cho agent cách đọc và tìm kiếm code, sửa file ho
 
 ### 2.2. Đọc mã nguồn theo luồng xử lý
 
-Phần này lần theo ba bước trong mã nguồn. Runtime lấy tập tool từ đâu, thực thi tool vào lúc nào và chuyển phiên sang bước kế tiếp ra sao? Các đoạn trích dưới đây lấy từ commit `12a661ea40cd5863b271a89bb06b8a3ddb7ab5a0` trên nhánh `dev`. Phân tích này dựa trên việc đọc code tại commit đó.
+Phần này lần theo quá trình chuẩn bị công cụ, thực thi lời gọi từ model và chuyển phiên sang bước tiếp theo. Các đoạn trích dưới đây lấy từ commit `12a661ea40cd5863b271a89bb06b8a3ddb7ab5a0` trên nhánh `dev`. Phân tích này dựa trên việc đọc code tại commit đó.
 
 ```mermaid
 flowchart LR
@@ -98,6 +98,6 @@ if (event.type !== "tool-call" || event.providerExecuted) return
 
 ### 2.3. Quyền thực thi và phạm vi kiểm soát
 
-OpenCode hỗ trợ ba quyết định quyền. `allow` cho phép chạy, `ask` yêu cầu người dùng duyệt và `deny` chặn thao tác. Quy tắc có thể áp dụng theo loại thao tác và tài nguyên, chẳng hạn đường dẫn cần sửa hoặc lệnh shell cần chạy. Trong V2, quy tắc khớp cuối cùng được áp dụng. Một cấu hình có thể đặt quy tắc chung yêu cầu duyệt lệnh shell, rồi thêm ngoại lệ cho phép xem diff và chặn push. V1 dùng các tên như `permission` và `bash`, còn V2 dùng `permissions` và `shell`. [Tài liệu quyền V1](https://docs.opencode.ai/docs/permissions/) · [Tài liệu quyền V2](https://opencode.ai/v2/docs/permissions/)
+OpenCode hỗ trợ ba quyết định quyền. `allow` cho phép chạy, `ask` yêu cầu người dùng duyệt và `deny` chặn thao tác. Quy tắc có thể áp dụng theo loại thao tác và tài nguyên, chẳng hạn đường dẫn cần sửa hoặc lệnh shell cần chạy. Trong V2, quy tắc khớp cuối cùng được áp dụng. Một cấu hình có thể đặt quy tắc chung yêu cầu duyệt lệnh shell, rồi thêm ngoại lệ cho phép xem diff và chặn push. V1 dùng các tên như `permission` và `bash`, còn V2 dùng `permissions` và `shell`. [Tài liệu quyền V1](https://opencode.ai/v1/docs/permissions/) · [Tài liệu quyền V2](https://opencode.ai/v2/docs/permissions/)
 
-Một hướng tìm hiểu sâu hơn là theo dõi cùng một lời gọi shell qua ba trường hợp `allow`, `ask` và `deny`. Có thể đối chiếu vị trí runtime chờ duyệt, dữ liệu session ghi nhận khi thao tác bị từ chối và thông tin được đưa vào lượt gọi model tiếp theo. Đây là phần nối trực tiếp giữa cơ chế quyền trong cấu hình và hành vi người dùng quan sát được khi agent làm việc.
+Việc theo dõi một lời gọi shell qua ba trường hợp `allow`, `ask` và `deny` giúp làm rõ cách cấu hình quyền ảnh hưởng đến hành vi thực thi. Các điểm cần đối chiếu gồm thời điểm runtime chờ phê duyệt, trạng thái được lưu khi thao tác bị từ chối và thông tin trả về cho model. Các ca thực nghiệm tương ứng được trình bày trong Báo cáo 2.

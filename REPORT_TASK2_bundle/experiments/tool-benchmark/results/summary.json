@@ -1,0 +1,256 @@
+{
+  "model": "gpt-6.1-sol",
+  "reasoning": "medium",
+  "planned": 27,
+  "completed": 27,
+  "tools": {
+    "opencode": {
+      "attempts": 9,
+      "successes": 9,
+      "completion_rate": 1.0,
+      "seconds": {
+        "median": 59.987,
+        "min": 48.595,
+        "max": 86.623,
+        "mean": 65.54211111111111,
+        "sum": 589.879
+      },
+      "tokens": {
+        "median": 37190,
+        "min": 35615,
+        "max": 40194,
+        "mean": 37618.77777777778,
+        "sum": 338569
+      },
+      "input_total": 321609,
+      "input_cached": 255616,
+      "input_uncached": 65993,
+      "output_total": 16960,
+      "reasoning": 588,
+      "acceptance_passed": 87,
+      "acceptance_total": 87
+    },
+    "pi": {
+      "attempts": 9,
+      "successes": 9,
+      "completion_rate": 1.0,
+      "seconds": {
+        "median": 55.207,
+        "min": 46.854,
+        "max": 70.579,
+        "mean": 58.413666666666664,
+        "sum": 525.723
+      },
+      "tokens": {
+        "median": 20255,
+        "min": 16438,
+        "max": 25350,
+        "mean": 20747,
+        "sum": 186723
+      },
+      "input_total": 170608,
+      "input_cached": 107520,
+      "input_uncached": 63088,
+      "output_total": 16115,
+      "reasoning": 504,
+      "acceptance_passed": 87,
+      "acceptance_total": 87
+    },
+    "codex": {
+      "attempts": 9,
+      "successes": 9,
+      "completion_rate": 1.0,
+      "seconds": {
+        "median": 71.823,
+        "min": 55.005,
+        "max": 88.968,
+        "mean": 71.10211111111111,
+        "sum": 639.919
+      },
+      "tokens": {
+        "median": 84184,
+        "min": 64008,
+        "max": 88789,
+        "mean": 77162.66666666667,
+        "sum": 694464
+      },
+      "input_total": 677012,
+      "input_cached": 600832,
+      "input_uncached": 76180,
+      "output_total": 17452,
+      "reasoning": 499,
+      "acceptance_passed": 87,
+      "acceptance_total": 87
+    }
+  },
+  "by_task": {
+    "T1": {
+      "opencode": {
+        "attempts": 3,
+        "successes": 3,
+        "seconds": {
+          "median": 51.014,
+          "min": 48.595,
+          "max": 58.331,
+          "mean": 52.64666666666667,
+          "sum": 157.94
+        },
+        "tokens": {
+          "median": 35640,
+          "min": 35615,
+          "max": 35845,
+          "mean": 35700,
+          "sum": 107100
+        }
+      },
+      "pi": {
+        "attempts": 3,
+        "successes": 3,
+        "seconds": {
+          "median": 47.342,
+          "min": 46.854,
+          "max": 54.858,
+          "mean": 49.684666666666665,
+          "sum": 149.054
+        },
+        "tokens": {
+          "median": 16585,
+          "min": 16438,
+          "max": 20429,
+          "mean": 17817.333333333332,
+          "sum": 53452
+        }
+      },
+      "codex": {
+        "attempts": 3,
+        "successes": 3,
+        "seconds": {
+          "median": 55.151,
+          "min": 55.005,
+          "max": 57.983,
+          "mean": 56.04633333333334,
+          "sum": 168.139
+        },
+        "tokens": {
+          "median": 65801,
+          "min": 64008,
+          "max": 66470,
+          "mean": 65426.333333333336,
+          "sum": 196279
+        }
+      }
+    },
+    "T2": {
+      "opencode": {
+        "attempts": 3,
+        "successes": 3,
+        "seconds": {
+          "median": 81.287,
+          "min": 79.868,
+          "max": 86.623,
+          "mean": 82.59266666666667,
+          "sum": 247.77800000000002
+        },
+        "tokens": {
+          "median": 40045,
+          "min": 40008,
+          "max": 40194,
+          "mean": 40082.333333333336,
+          "sum": 120247
+        }
+      },
+      "pi": {
+        "attempts": 3,
+        "successes": 3,
+        "seconds": {
+          "median": 69.91,
+          "min": 69.885,
+          "max": 70.579,
+          "mean": 70.12466666666667,
+          "sum": 210.374
+        },
+        "tokens": {
+          "median": 25140,
+          "min": 23965,
+          "max": 25350,
+          "mean": 24818.333333333332,
+          "sum": 74455
+        }
+      },
+      "codex": {
+        "attempts": 3,
+        "successes": 3,
+        "seconds": {
+          "median": 84.544,
+          "min": 84.211,
+          "max": 88.968,
+          "mean": 85.90766666666667,
+          "sum": 257.723
+        },
+        "tokens": {
+          "median": 88516,
+          "min": 84184,
+          "max": 88789,
+          "mean": 87163,
+          "sum": 261489
+        }
+      }
+    },
+    "T3": {
+      "opencode": {
+        "attempts": 3,
+        "successes": 3,
+        "seconds": {
+          "median": 59.987,
+          "min": 58.7,
+          "max": 65.474,
+          "mean": 61.387,
+          "sum": 184.161
+        },
+        "tokens": {
+          "median": 37190,
+          "min": 36773,
+          "max": 37259,
+          "mean": 37074,
+          "sum": 111222
+        }
+      },
+      "pi": {
+        "attempts": 3,
+        "successes": 3,
+        "seconds": {
+          "median": 55.207,
+          "min": 53.31,
+          "max": 57.778,
+          "mean": 55.431666666666665,
+          "sum": 166.29500000000002
+        },
+        "tokens": {
+          "median": 19316,
+          "min": 19245,
+          "max": 20255,
+          "mean": 19605.333333333332,
+          "sum": 58816
+        }
+      },
+      "codex": {
+        "attempts": 3,
+        "successes": 3,
+        "seconds": {
+          "median": 71.823,
+          "min": 70.135,
+          "max": 72.099,
+          "mean": 71.35233333333333,
+          "sum": 214.05700000000002
+        },
+        "tokens": {
+          "median": 85160,
+          "min": 65387,
+          "max": 86149,
+          "mean": 78898.66666666667,
+          "sum": 236696
+        }
+      }
+    }
+  }
+}

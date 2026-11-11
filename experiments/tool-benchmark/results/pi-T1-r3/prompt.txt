@@ -1,0 +1,3 @@
+Read README.md before working. Use Python 3 standard library only. Implement the task autonomously and do not delegate.
+
+Fix calculate_totals in cartkit/money.py. Explicit quantity=0 must contribute zero, while a missing quantity must still default to one. Explicit null, boolean, negative or fractional quantities must raise ValueError. Preserve integer-cent discount rounding and charge shipping only if the original subtotal is positive. Do not mutate input lines or change the public API. Run the existing tests and add focused regression tests. Work only on this task. Do not delegate work. Finish with a short summary of changes and checks.

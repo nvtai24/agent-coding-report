@@ -1,0 +1,622 @@
+[
+  {
+    "id": "msg_1c8a67154001F6qPWXZn2XQueF",
+    "time": {
+      "created": 1794367713771
+    },
+    "text": "Read README.md before working. Use Python 3 standard library only. Implement the task autonomously and do not delegate.\n\nAdd cartkit.csvio.load_orders(text) and wire a new CLI command: python3 -m cartkit.cli import-csv path.csv. The CLI prints the returned value as JSON. Keep totals and summary commands working.\nCSV requires exactly the headers order_id,sku,quantity,unit_price_cents, in any order. Trim surrounding whitespace in headers and cell values. Reject missing, duplicate or extra headers. Ignore completely blank rows. Reject rows with missing or extra cells, empty order_id or sku, or quantity/price not made exclusively of ASCII decimal digits. Zero and leading zeros are allowed; negative values, decimals and booleans written as words are invalid. Invalid input raises ValueError. Use standard-library CSV parsing so quoted commas/newlines work.\nReturn a list of dictionaries shaped {\"order_id\":\"A1\",\"lines\":[{\"sku\":\"BOOK\",\"quantity\":2,\"unit_price_cents\":150}]}. Group rows by order_id in first-seen order and keep each order's lines in input order, including duplicate SKUs. Header-only input returns []. Add focused tests. Do not modify existing tests or implement unrelated changes. Do not delegate work. Finish with a short summary and checks.\n",
+    "type": "user"
+  },
+  {
+    "id": "msg_1c8a671f3001hriEWE9Fbc4Jk6",
+    "time": {
+      "created": 1794367713783,
+      "streamed": 1794367720899,
+      "completed": 1794367720906
+    },
+    "type": "assistant",
+    "agent": "build",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "medium"
+    },
+    "content": [
+      {
+        "type": "tool",
+        "id": "call_340a8662452b41b987542f42a8b545b9",
+        "name": "read",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e0e8371487d087431f1461265a3d"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "/tmp/coding-benchmark/workspaces/opencode-T2-r1/README.md"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Read file /tmp/coding-benchmark/workspaces/opencode-T2-r1/README.md, lines 1-10\n1: # Cartkit benchmark project\n2: \n3: Python 3.12, standard library only. Run existing tests with\n4: `python3 -m unittest discover -s tests -v`.\n5: \n6: - `cartkit.money.calculate_totals` calculates integer cents. Missing quantity defaults to one. Explicit quantities must be nonnegative integers, including zero. Booleans and null are invalid. Discounts round half up. Shipping is charged only when the original subtotal is positive.\n7: - `cartkit.reports.customer_totals` and `summarize_orders` summarize paid, pending and cancelled orders. Preserve public signatures and JSON key names.\n8: - `python3 -m cartkit.cli totals input.json` and `summary input.json` are the existing CLI commands.\n9: \n10: Example order data is in `sample_orders.json`. Keep changes within this project. Do not change or remove existing tests. Implement the requested task and run relevant checks. Do not delegate work."
+            }
+          ],
+          "metadata": {
+            "truncated": false
+          }
+        },
+        "time": {
+          "created": 1794367720740,
+          "ran": 1794367720749,
+          "completed": 1794367720754
+        }
+      }
+    ],
+    "snapshot": {
+      "start": "39732d666ad327cf76fab7ef467490f3dee060d2",
+      "end": "39732d666ad327cf76fab7ef467490f3dee060d2",
+      "files": []
+    },
+    "finish": "tool-calls",
+    "native": {
+      "responseId": "resp_0d7e8a0e5c0b4669016af3e0e50a6c87d0b38ca74506831e67",
+      "serviceTier": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 2686,
+      "output": 33,
+      "reasoning": 0,
+      "cache": {
+        "read": 2048,
+        "write": 0
+      }
+    }
+  },
+  {
+    "id": "msg_1c8a68dd10014sipNJaWOldwfb",
+    "time": {
+      "created": 1794367720916,
+      "streamed": 1794367726817,
+      "completed": 1794367726823
+    },
+    "type": "assistant",
+    "agent": "build",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "medium"
+    },
+    "content": [
+      {
+        "type": "tool",
+        "id": "call_dedaa60512ad4141aa81916f3cb16e69",
+        "name": "glob",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e0ecb5e087d0bc4f03267aa31f1a"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "pattern": "**/AGENTS.md",
+            "hidden": true
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "No files found"
+            }
+          ],
+          "metadata": {
+            "count": 0,
+            "truncated": false
+          }
+        },
+        "time": {
+          "created": 1794367726108,
+          "ran": 1794367726110,
+          "completed": 1794367726119
+        }
+      },
+      {
+        "type": "tool",
+        "id": "call_6daf15acf28341208287dc5e7c8e862c",
+        "name": "read",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e0ee028887d0ab9afcdfa7f2528b"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "cartkit"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Read directory cartkit, entries 1-4\n__init__.py\ncli.py\nmoney.py\nreports.py"
+            }
+          ],
+          "metadata": {
+            "truncated": false
+          }
+        },
+        "time": {
+          "created": 1794367726111,
+          "ran": 1794367726201,
+          "completed": 1794367726214
+        }
+      },
+      {
+        "type": "tool",
+        "id": "call_3e19b0fa5c334dfdad7d742a712d0b0e",
+        "name": "read",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e0ee028887d0a6d3e54aa35a775a"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "tests"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Read directory tests, entries 1-1\ntest_existing.py"
+            }
+          ],
+          "metadata": {
+            "truncated": false
+          }
+        },
+        "time": {
+          "created": 1794367726202,
+          "ran": 1794367726204,
+          "completed": 1794367726216
+        }
+      },
+      {
+        "type": "tool",
+        "id": "call_deac6227b6d34f4788ccd50cc3bf5dc0",
+        "name": "shell",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e0ee028887d08f7cc34ea0951a54"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "git status --short"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "(no output)"
+            }
+          ],
+          "metadata": {
+            "status": "completed",
+            "truncated": false,
+            "exit": 0
+          }
+        },
+        "time": {
+          "created": 1794367726206,
+          "ran": 1794367726208,
+          "completed": 1794367726218
+        }
+      }
+    ],
+    "snapshot": {
+      "start": "39732d666ad327cf76fab7ef467490f3dee060d2",
+      "end": "39732d666ad327cf76fab7ef467490f3dee060d2",
+      "files": []
+    },
+    "finish": "tool-calls",
+    "native": {
+      "responseId": "resp_0d7e8a0e5c0b4669016af3e0ea4f5487d0b90d67fb246d1762",
+      "serviceTier": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 5010,
+      "output": 84,
+      "reasoning": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    }
+  },
+  {
+    "id": "msg_1c8a6a4ec001y3pVlhAqSs6dj1",
+    "time": {
+      "created": 1794367726831,
+      "streamed": 1794367732166,
+      "completed": 1794367732171
+    },
+    "type": "assistant",
+    "agent": "build",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "medium"
+    },
+    "content": [
+      {
+        "type": "tool",
+        "id": "call_e97caa6d34e2420ea80c474b5eafe1b3",
+        "name": "read",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e0f2e7f887d08578cad65a889643"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "cartkit/cli.py"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Read file cartkit/cli.py, lines 1-22\n1: import argparse\n2: import json\n3: from pathlib import Path\n4: from .money import calculate_totals\n5: from .reports import summarize_orders\n6: \n7: \n8: def main():\n9:     parser = argparse.ArgumentParser(prog='cartkit')\n10:     parser.add_argument('command', choices=['totals', 'summary'])\n11:     parser.add_argument('path', type=Path)\n12:     args = parser.parse_args()\n13:     data = json.loads(args.path.read_text())\n14:     if args.command == 'totals':\n15:         result = calculate_totals(data)\n16:     else:\n17:         result = summarize_orders(data)\n18:     print(json.dumps(result, sort_keys=True))\n19: \n20: \n21: if __name__ == '__main__':\n22:     main()"
+            }
+          ],
+          "metadata": {
+            "truncated": false
+          }
+        },
+        "time": {
+          "created": 1794367732024,
+          "ran": 1794367732027,
+          "completed": 1794367732038
+        }
+      },
+      {
+        "type": "tool",
+        "id": "call_ac8502c61cac4f5c8a9d2ba9095b0a1d",
+        "name": "read",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e0f3fc9c87d0b53342a7e19cfee0"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "tests/test_existing.py"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Read file tests/test_existing.py, lines 1-28\n1: import unittest\n2: from cartkit.money import calculate_totals\n3: from cartkit.reports import customer_totals, summarize_orders\n4: \n5: \n6: class ExistingTests(unittest.TestCase):\n7:     def test_regular_total(self):\n8:         self.assertEqual(calculate_totals([{'unit_price_cents': 200, 'quantity': 2}], 10, 25)['total_cents'], 385)\n9: \n10:     def test_default_quantity(self):\n11:         self.assertEqual(calculate_totals([{'unit_price_cents': 101}])['total_cents'], 101)\n12: \n13:     def test_invalid_discount(self):\n14:         with self.assertRaises(ValueError):\n15:             calculate_totals([], 101)\n16: \n17:     def test_list_report(self):\n18:         orders = [\n19:             {'customer': 'A', 'status': 'paid', 'total_cents': 200},\n20:             {'customer': 'B', 'status': 'cancelled', 'total_cents': 500},\n21:             {'customer': 'A', 'status': 'paid', 'total_cents': 100},\n22:         ]\n23:         self.assertEqual(customer_totals(orders), {'A': 300})\n24:         self.assertEqual(summarize_orders(orders), {'paid_count': 2, 'paid_total_cents': 300, 'cancelled_count': 1, 'customers': {'A': 300}})\n25: \n26: \n27: if __name__ == '__main__':\n28:     unittest.main()"
+            }
+          ],
+          "metadata": {
+            "truncated": false
+          }
+        },
+        "time": {
+          "created": 1794367732028,
+          "ran": 1794367732031,
+          "completed": 1794367732039
+        }
+      },
+      {
+        "type": "tool",
+        "id": "call_4e6e2d2313ab40cca4fb4a70a2ce89aa",
+        "name": "read",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e0f3fc9c87d0b3fb81a25a04578d"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "cartkit/__init__.py"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Read file cartkit/__init__.py, lines 1-1\n1: \"\"\"Small order-processing library used by the coding-agent benchmark.\"\"\""
+            }
+          ],
+          "metadata": {
+            "truncated": false
+          }
+        },
+        "time": {
+          "created": 1794367732032,
+          "ran": 1794367732034,
+          "completed": 1794367732040
+        }
+      }
+    ],
+    "snapshot": {
+      "start": "39732d666ad327cf76fab7ef467490f3dee060d2",
+      "end": "39732d666ad327cf76fab7ef467490f3dee060d2",
+      "files": []
+    },
+    "finish": "tool-calls",
+    "native": {
+      "responseId": "resp_0d7e8a0e5c0b4669016af3e0f0d37087d0947dacb0696f917b",
+      "serviceTier": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 563,
+      "output": 71,
+      "reasoning": 0,
+      "cache": {
+        "read": 4608,
+        "write": 0
+      }
+    }
+  },
+  {
+    "id": "msg_1c8a6b9d1001gZwcGh1yHBz2zR",
+    "time": {
+      "created": 1794367732180,
+      "streamed": 1794367783335,
+      "completed": 1794367783361
+    },
+    "type": "assistant",
+    "agent": "build",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "medium"
+    },
+    "content": [
+      {
+        "type": "reasoning",
+        "text": "**Defining blank-row handling**",
+        "native": {
+          "itemId": "rs_0d7e8a0e5c0b4669016af3e0f85ce887d0bb5939f6abc66ea9",
+          "reasoningEncryptedContent": "gAAAAABq8-D-7yC3Nm6SxvvXB56DMyNQmBR9QAlKPI-xLWjj2FSjNEUGMLY1IrVY3D7Sq_MGycucnMxvuwpf3SNBoCqWu86aR-PEQ3r1-B5XsPnwlquslLNVUQY1tLMzUjUr3ddSg2hdtC8f3XXAyXHpLjEe5ARgGl7PK6jIUOowRwSuK1l5MYppnwODRkyHSfAV9ydgjCWREsKydJN2pPj2_91F-fDy-mgqOSKC9UQbEhjkqmOktj1eCeV9b1nbF5s4Lw_Cg5vmA_m0BZuzxTnwhQbZg5YMdgLxLAnc607frPvfZ2zt6MXdQpA225Do1lap3IqEdO1cdL6DHhAQdUUnys3_QYKbSP2kmXRaGzd6BmpvY6YPJVRN8eRffeRvK9M8Q_BMxdVTu8SwxkR75tC_YZToYfiITbXXkw2CrD9HerZJOLKgBj5bUITM5Dmt1za6o_2Zt-RCjNNDBv2dIQzcPBsqVX8eqgKS2NCMYjYISKJ2D6XRzpnjWCOtXLDwOu904ArO5FAFhi4j9uaDvZbKTNrT3rGFDUoQjwo1biGdG2mok8-tGyeD1yUyFCqKnB_Ria5Aaw8lK9-qhqtJjwf1lofUhyZe7g6WUMzX9bf-sh1fGNlLXvq0Wy2WDlBjE7THLSTrZwDNqI008IyzRobNk1BNo3rydOpnJEgq-GUeePBfLtMcsqNH3l0gYUcPTtXu94tSa-RZJ4S1Yj-dlSChZmc4ZKT8bKkx-SBRyrMrneSzGQ8t4Rs8UCq4sl6Df3ErLWG0d_SrslV7g9Cp93EfzpsTXdIYhMfFykVpfuAjlP4UeYF6azIm4riSoLWvqGHPgsxNBflIRBFXCxyiDcD9k9a22VUEXwh0jBbVbyGIw3MzUuOaTVX-YaPxex5QdCJtG5eR5VAz7TWUe9Bj6jHCbUBIYKgiCdxrlUWK7l3VRLFQgOxDjr0cMGu2XtLT6J5YXO9ogtr2ovsqrNXwRDVWjsZFtrQYKTzgotmYneup1HGiO71H3fhFve7kWwUQszimtSQZ4EK7fxHFZ6LLrH21wHb5umbyTUrbeQeGo10lhvfwJOWsoVswmjGCbJHMk5p4oIXV92i1F28VUXNA4G1b98_lgZn2uGU4e0Sn2LHKiv_1xvGCjrz2rcGlCNBKJqcE8Fc1kWdpcpldX2_yUPM0p-4Yq-87_AjffHsuxIi8rgGXddH158DwUcj7cIMtpYFzh70U2s5q26Ae7JeSRzfKIjeiriuObMcOEpBs-WTCkzSe9FrLMes7vy-4bl0O6tQH4MXBt74SmfbiN3iB2WfIVtLjJFtBWRt87p8FiHL_IK_s9jPeqlULqaNSIUiUc9Buek4LEcfaW-e3vJqwGcdKYIdeOFiYk1FEAoshGfBr_Beue2Qpf8eRpVXlHa7AILTJLYCvut_p9VJ3xKPqAqG1DHpZDDlr0ZIbZcvjdndIJM8RV3DhXJO6pCHIu3A0ux6eLHIqLb6RS5z-65R6rh8VokJPC7sFCnAA5Omu3KSwoKLJbY8frcOCgMwgpPKWBiXuOxIL8lw7KwvWfIAMNYVm57HlzjEIpjSqCiB2VJN2CmT4mvaM800zsXrGNuXmA2eu8CPBhSDreGvihmEBWKUXEFGVLC1rSUKqmWVLljfZMo82tjsMM9EmcEqVwsGK6Wvc4mKPerSQ6h-DNOWOiFoZkmzBTJ722TweSUdjyCdIBJR1nn6fO6KyWHp1wLw4tM2ecKEeha9kQcpIZdwW47vcvS-5rEutAW1T-vBPeltMOP8Hg8e7jJqmWgwRbU4qDqjk7NNTyniIfLlAlIPbaE4hP8XvdNjFkGBEOJkxCaWrLAI-83e7KpIpSlRoxwpjVgUuHWiRYRwgO6RohgcOxvSRZOZaDETBxcwjzsCkM1Af9YZrefs0gzYJF5T0NwoRPMV34sKp_iZK3lVeySTzMnsMJOm4J-8JGvRM1VYUKoF0MCvrAajf3w9Ml5mqFbDpLTC0AX7sN2rcLTDc-1mgxSCM84CD-9CV3JRpu1um1hwXmGgp9nHH0S0DlUgJypYHOd9c6TZQOlg5v1j5nDa38-pzTLznYzIt7vw5D6CVwc8WLYTKI7P3T0ZGKlo3g4Ye7ndM9KO70pyjLvWauRxaF8T3gmf6S0lXg6n8l2f2MUxqtUpN0ir1my6v-tnytcDQRcQ-x-k--JhY19OAPZZ50151prMPBcmfKzdjnkWatLoJgg9bkI-NPDL7Lvd7PhXj7Pv-fgEZLfSCLiZOIFE3Mjzp-rvHJh2tS3ZgPPvVrJE4EqVZ0U_evRNZt5C555pc11CaUg0kYAr8LHnq2GtRFwi0LopfLRfAJY6f9zUZVLQ8Hk34I2xxwPd76eeWpLea40ard501x3XS9LXooJmcyGfZFFpDQOkQ-Zu4Hz_gJQe6aq7HMcC63-mzC_-MGUDMHZAb7zpAGADrtoKo3HZeKhjgRDOVw3Y4lD68olB9eVI7-2Y2VO5rUX5RBgb7c6DWChHiQBk-6btgM1qdzXVW2O06g3Imi4lKyxWfZaFym2He0AePZr6gfPDMEhKjvn6NykRPh1Ln8CDACaF34ouF6_iHIGr6Yq85W3-CsTfsYntFeUBbZrJNGcUeh9lBUlD0TSDhu6Z3S8H-g3NnKoA2a4ImiR0Ey9ivVcVebTZmuA1EUzFA8L8rEYXmmjsXvxYorRdBJa6CZ-81OvojiTqSQ_phYU9E2EVYZP2sy2USxkzuP-AvYJkYRkAc1aV_mQtE5cpYKg1uL5V-6H5qJJyjPoJL-evl-fZ_WLNcZ6-EnkZHhkuJ3qIzMZF19eghc4ZTkJm1pdCjCqyhTJim6Z9UQTr-cNlQiVpZyN-CxjZZz8VFIAVu6eMCLfW-nWJ26Cvt3cTgN0xeWQ37u6N7Pyaa3y_pVvuUn1k6SuJRm6SQWkYPoYH4-w9cpvhpKoYXp5O7ZXu_zVrhsfhaaEfhsMuQXw2kjXtJS1M9lhVMx50u1AnLhFS84XyUW1X2_HDrtGIYz6pi_v94JJr0wzkxxYxmUlXqVhhy1Ay-_5Rwwe1CFmFChinS-jbcynNb6edjx-wjMHxmKWCxk1HYMkxylhYgmGvhljBBEFd3V4MVAxXyaTrFqG3bBsCVO919QOym2raIdyzkGF5w7N1jW16bPLrGZnXwdmMNKrSQSg=="
+        },
+        "time": {
+          "created": 1794367736488,
+          "completed": 1794367742583
+        }
+      },
+      {
+        "type": "text",
+        "text": "I’ll add a CSV loader with strict validation and an `import-csv` CLI branch, leaving the existing JSON commands unchanged. Tests will cover grouping, quoted fields, invalid input, and all three CLI commands.",
+        "native": {
+          "itemId": "msg_0d7e8a0e5c0b4669016af3e0fe864487d08bbcce44128f1db5",
+          "phase": "commentary"
+        }
+      },
+      {
+        "type": "tool",
+        "id": "call_68ac460566e14650b47970e6460421d2",
+        "name": "patch",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e0fe8b1c87d0aefc923ffd3daa64"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "patchText": "*** Begin Patch\n*** Add File: cartkit/csvio.py\n+\"\"\"Read order lines from CSV text.\"\"\"\n+\n+import csv\n+import io\n+\n+\n+def load_orders(text):\n+    required = {'order_id', 'sku', 'quantity', 'unit_price_cents'}\n+    orders = {}\n+    try:\n+        reader = csv.reader(io.StringIO(text, newline=''), strict=True)\n+        headers = next(reader, [])\n+        headers = [header.strip() for header in headers]\n+        if len(headers) != len(required) or set(headers) != required:\n+            raise ValueError('CSV headers must be exactly: order_id, sku, quantity, unit_price_cents')\n+\n+        for row in reader:\n+            values = [cell.strip() for cell in row]\n+            if not any(values):\n+                continue\n+            if len(values) != len(headers):\n+                raise ValueError('CSV row must have exactly four cells')\n+            fields = dict(zip(headers, values))\n+            if not fields['order_id'] or not fields['sku']:\n+                raise ValueError('order_id and sku must not be empty')\n+            for name in ('quantity', 'unit_price_cents'):\n+                value = fields[name]\n+                if not value or any(char not in '0123456789' for char in value):\n+                    raise ValueError(f'{name} must contain only ASCII decimal digits')\n+            order_id = fields['order_id']\n+            if order_id not in orders:\n+                orders[order_id] = {'order_id': order_id, 'lines': []}\n+            orders[order_id]['lines'].append({\n+                'sku': fields['sku'],\n+                'quantity': int(fields['quantity']),\n+                'unit_price_cents': int(fields['unit_price_cents']),\n+            })\n+    except csv.Error as exc:\n+        raise ValueError(f'Invalid CSV: {exc}') from exc\n+    return list(orders.values())\n*** Update File: cartkit/cli.py\n@@\n from pathlib import Path\n+from .csvio import load_orders\n@@\n-    parser.add_argument('command', choices=['totals', 'summary'])\n+    parser.add_argument('command', choices=['totals', 'summary', 'import-csv'])\n@@\n-    data = json.loads(args.path.read_text())\n-    if args.command == 'totals':\n-        result = calculate_totals(data)\n+    if args.command == 'import-csv':\n+        with args.path.open(encoding='utf-8', newline='') as source:\n+            result = load_orders(source.read())\n     else:\n-        result = summarize_orders(data)\n+        data = json.loads(args.path.read_text())\n+        if args.command == 'totals':\n+            result = calculate_totals(data)\n+        else:\n+            result = summarize_orders(data)\n*** Add File: tests/test_csvio.py\n+import json\n+from pathlib import Path\n+import subprocess\n+import sys\n+import tempfile\n+import unittest\n+\n+from cartkit.csvio import load_orders\n+\n+\n+HEADER = 'order_id,sku,quantity,unit_price_cents\\n'\n+\n+\n+class LoadOrdersTests(unittest.TestCase):\n+    def test_grouping_and_line_order_with_duplicate_skus(self):\n+        self.assertEqual(load_orders(\n+            HEADER + 'A1,BOOK,2,150\\nB2,PEN,1,25\\nA1,BOOK,3,100\\n'\n+        ), [\n+            {'order_id': 'A1', 'lines': [\n+                {'sku': 'BOOK', 'quantity': 2, 'unit_price_cents': 150},\n+                {'sku': 'BOOK', 'quantity': 3, 'unit_price_cents': 100},\n+            ]},\n+            {'order_id': 'B2', 'lines': [\n+                {'sku': 'PEN', 'quantity': 1, 'unit_price_cents': 25},\n+            ]},\n+        ])\n+\n+    def test_reordered_trimmed_headers_and_values(self):\n+        self.assertEqual(load_orders(\n+            ' unit_price_cents , quantity , sku , order_id \\n'\n+            ' 00150 , 000 , BOOK , A1 \\n'\n+        ), [{'order_id': 'A1', 'lines': [\n+            {'sku': 'BOOK', 'quantity': 0, 'unit_price_cents': 150},\n+        ]}])\n+\n+    def test_quoted_commas_newlines_and_escaped_quotes(self):\n+        self.assertEqual(load_orders(\n+            HEADER + '\"A,1\",\"BOOK\\r\\n\"\"special\"\"\",2,150\\r\\n'\n+        ), [{'order_id': 'A,1', 'lines': [\n+            {'sku': 'BOOK\\r\\n\"special\"', 'quantity': 2, 'unit_price_cents': 150},\n+        ]}])\n+\n+    def test_header_only_and_blank_rows(self):\n+        self.assertEqual(load_orders(HEADER), [])\n+        self.assertEqual(load_orders(HEADER + '\\n  \\n , , , \\n'), [])\n+        self.assertEqual(load_orders(\n+            HEADER + '\\nA1,BOOK,0,0\\n\\n'\n+        )[0]['lines'], [{'sku': 'BOOK', 'quantity': 0, 'unit_price_cents': 0}])\n+\n+    def test_invalid_headers(self):\n+        for header in (\n+            '', '\\n', 'order_id,sku,quantity\\n',\n+            'order_id,sku,quantity,unit_price_cents,extra\\n',\n+            'order_id,sku,quantity,quantity\\n',\n+            'order_id,sku,quantity, quantity \\n',\n+            'order_id,sku,quantity,price\\n',\n+        ):\n+            with self.subTest(header=header), self.assertRaises(ValueError):\n+                load_orders(header)\n+\n+    def test_invalid_row_shapes_and_identifiers(self):\n+        for row in (\n+            'A1,BOOK,1', 'A1,BOOK,1,150,extra', 'A1,BOOK,1,150,',\n+            ',BOOK,1,150', 'A1, ,1,150', ' ,BOOK,1,150',\n+        ):\n+            with self.subTest(row=row), self.assertRaises(ValueError):\n+                load_orders(HEADER + row + '\\n')\n+\n+    def test_invalid_numeric_values(self):\n+        for value in ('', '-1', '+1', '1.0', 'True', 'false', '1e2', '1 2', '١', '１２', '²'):\n+            for field in ('quantity', 'unit_price_cents'):\n+                fields = {'quantity': '1', 'unit_price_cents': '150'}\n+                fields[field] = value\n+                with self.subTest(value=value, field=field), self.assertRaises(ValueError):\n+                    load_orders(HEADER + f'A1,BOOK,{fields[\"quantity\"]},{fields[\"unit_price_cents\"]}\\n')\n+\n+    def test_malformed_csv_raises_value_error(self):\n+        with self.assertRaises(ValueError):\n+            load_orders(HEADER + 'A1,\"unterminated,1,150\\n')\n+\n+\n+class CsvCliTests(unittest.TestCase):\n+    def run_cli(self, command, text):\n+        with tempfile.TemporaryDirectory() as directory:\n+            path = Path(directory) / 'input'\n+            path.write_bytes(text.encode('utf-8'))\n+            result = subprocess.run(\n+                [sys.executable, '-m', 'cartkit.cli', command, str(path)],\n+                capture_output=True, text=True, check=True,\n+            )\n+        return json.loads(result.stdout)\n+\n+    def test_import_csv(self):\n+        text = HEADER + 'A1,\"BOOK\\r\\nSET\",2,150\\r\\n'\n+        self.assertEqual(self.run_cli('import-csv', text), load_orders(text))\n+\n+    def test_totals_still_accepts_json(self):\n+        result = self.run_cli('totals', '[{\"quantity\": 2, \"unit_price_cents\": 150}]')\n+        self.assertEqual(result['total_cents'], 300)\n+\n+    def test_summary_still_accepts_json(self):\n+        result = self.run_cli('summary', '[{\"customer\": \"A\", \"status\": \"paid\", \"total_cents\": 300}]')\n+        self.assertEqual(result['paid_total_cents'], 300)\n+        self.assertEqual(result['customers'], {'A': 300})\n+\n+\n+if __name__ == '__main__':\n+    unittest.main()\n*** End Patch"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Success. Updated the following files:\nA cartkit/csvio.py\nM cartkit/cli.py\nA tests/test_csvio.py"
+            }
+          ],
+          "metadata": {
+            "files": [
+              {
+                "file": "cartkit/csvio.py",
+                "patch": "Index: /tmp/coding-benchmark/workspaces/opencode-T2-r1/cartkit/csvio.py\n===================================================================\n--- /tmp/coding-benchmark/workspaces/opencode-T2-r1/cartkit/csvio.py\n+++ /tmp/coding-benchmark/workspaces/opencode-T2-r1/cartkit/csvio.py\n@@ -0,0 +1,40 @@\n+\"\"\"Read order lines from CSV text.\"\"\"\n+\n+import csv\n+import io\n+\n+\n+def load_orders(text):\n+    required = {'order_id', 'sku', 'quantity', 'unit_price_cents'}\n+    orders = {}\n+    try:\n+        reader = csv.reader(io.StringIO(text, newline=''), strict=True)\n+        headers = next(reader, [])\n+        headers = [header.strip() for header in headers]\n+        if len(headers) != len(required) or set(headers) != required:\n+            raise ValueError('CSV headers must be exactly: order_id, sku, quantity, unit_price_cents')\n+\n+        for row in reader:\n+            values = [cell.strip() for cell in row]\n+            if not any(values):\n+                continue\n+            if len(values) != len(headers):\n+                raise ValueError('CSV row must have exactly four cells')\n+            fields = dict(zip(headers, values))\n+            if not fields['order_id'] or not fields['sku']:\n+                raise ValueError('order_id and sku must not be empty')\n+            for name in ('quantity', 'unit_price_cents'):\n+                value = fields[name]\n+                if not value or any(char not in '0123456789' for char in value):\n+                    raise ValueError(f'{name} must contain only ASCII decimal digits')\n+            order_id = fields['order_id']\n+            if order_id not in orders:\n+                orders[order_id] = {'order_id': order_id, 'lines': []}\n+            orders[order_id]['lines'].append({\n+                'sku': fields['sku'],\n+                'quantity': int(fields['quantity']),\n+                'unit_price_cents': int(fields['unit_price_cents']),\n+            })\n+    except csv.Error as exc:\n+        raise ValueError(f'Invalid CSV: {exc}') from exc\n+    return list(orders.values())\n",
+                "status": "added",
+                "additions": 40,
+                "deletions": 0
+              },
+              {
+                "file": "cartkit/cli.py",
+                "patch": "Index: /tmp/coding-benchmark/workspaces/opencode-T2-r1/cartkit/cli.py\n===================================================================\n--- /tmp/coding-benchmark/workspaces/opencode-T2-r1/cartkit/cli.py\n+++ /tmp/coding-benchmark/workspaces/opencode-T2-r1/cartkit/cli.py\n@@ -1,21 +1,26 @@\n import argparse\n import json\n from pathlib import Path\n+from .csvio import load_orders\n from .money import calculate_totals\n from .reports import summarize_orders\n \n \n def main():\n     parser = argparse.ArgumentParser(prog='cartkit')\n-    parser.add_argument('command', choices=['totals', 'summary'])\n+    parser.add_argument('command', choices=['totals', 'summary', 'import-csv'])\n     parser.add_argument('path', type=Path)\n     args = parser.parse_args()\n-    data = json.loads(args.path.read_text())\n-    if args.command == 'totals':\n-        result = calculate_totals(data)\n+    if args.command == 'import-csv':\n+        with args.path.open(encoding='utf-8', newline='') as source:\n+            result = load_orders(source.read())\n     else:\n-        result = summarize_orders(data)\n+        data = json.loads(args.path.read_text())\n+        if args.command == 'totals':\n+            result = calculate_totals(data)\n+        else:\n+            result = summarize_orders(data)\n     print(json.dumps(result, sort_keys=True))\n \n \n if __name__ == '__main__':\n",
+                "status": "modified",
+                "additions": 10,
+                "deletions": 5
+              },
+              {
+                "file": "tests/test_csvio.py",
+                "patch": "Index: /tmp/coding-benchmark/workspaces/opencode-T2-r1/tests/test_csvio.py\n===================================================================\n--- /tmp/coding-benchmark/workspaces/opencode-T2-r1/tests/test_csvio.py\n+++ /tmp/coding-benchmark/workspaces/opencode-T2-r1/tests/test_csvio.py\n@@ -0,0 +1,108 @@\n+import json\n+from pathlib import Path\n+import subprocess\n+import sys\n+import tempfile\n+import unittest\n+\n+from cartkit.csvio import load_orders\n+\n+\n+HEADER = 'order_id,sku,quantity,unit_price_cents\\n'\n+\n+\n+class LoadOrdersTests(unittest.TestCase):\n+    def test_grouping_and_line_order_with_duplicate_skus(self):\n+        self.assertEqual(load_orders(\n+            HEADER + 'A1,BOOK,2,150\\nB2,PEN,1,25\\nA1,BOOK,3,100\\n'\n+        ), [\n+            {'order_id': 'A1', 'lines': [\n+                {'sku': 'BOOK', 'quantity': 2, 'unit_price_cents': 150},\n+                {'sku': 'BOOK', 'quantity': 3, 'unit_price_cents': 100},\n+            ]},\n+            {'order_id': 'B2', 'lines': [\n+                {'sku': 'PEN', 'quantity': 1, 'unit_price_cents': 25},\n+            ]},\n+        ])\n+\n+    def test_reordered_trimmed_headers_and_values(self):\n+        self.assertEqual(load_orders(\n+            ' unit_price_cents , quantity , sku , order_id \\n'\n+            ' 00150 , 000 , BOOK , A1 \\n'\n+        ), [{'order_id': 'A1', 'lines': [\n+            {'sku': 'BOOK', 'quantity': 0, 'unit_price_cents': 150},\n+        ]}])\n+\n+    def test_quoted_commas_newlines_and_escaped_quotes(self):\n+        self.assertEqual(load_orders(\n+            HEADER + '\"A,1\",\"BOOK\\r\\n\"\"special\"\"\",2,150\\r\\n'\n+        ), [{'order_id': 'A,1', 'lines': [\n+            {'sku': 'BOOK\\r\\n\"special\"', 'quantity': 2, 'unit_price_cents': 150},\n+        ]}])\n+\n+    def test_header_only_and_blank_rows(self):\n+        self.assertEqual(load_orders(HEADER), [])\n+        self.assertEqual(load_orders(HEADER + '\\n  \\n , , , \\n'), [])\n+        self.assertEqual(load_orders(\n+            HEADER + '\\nA1,BOOK,0,0\\n\\n'\n+        )[0]['lines'], [{'sku': 'BOOK', 'quantity': 0, 'unit_price_cents': 0}])\n+\n+    def test_invalid_headers(self):\n+        for header in (\n+            '', '\\n', 'order_id,sku,quantity\\n',\n+            'order_id,sku,quantity,unit_price_cents,extra\\n',\n+            'order_id,sku,quantity,quantity\\n',\n+            'order_id,sku,quantity, quantity \\n',\n+            'order_id,sku,quantity,price\\n',\n+        ):\n+            with self.subTest(header=header), self.assertRaises(ValueError):\n+                load_orders(header)\n+\n+    def test_invalid_row_shapes_and_identifiers(self):\n+        for row in (\n+            'A1,BOOK,1', 'A1,BOOK,1,150,extra', 'A1,BOOK,1,150,',\n+            ',BOOK,1,150', 'A1, ,1,150', ' ,BOOK,1,150',\n+        ):\n+            with self.subTest(row=row), self.assertRaises(ValueError):\n+                load_orders(HEADER + row + '\\n')\n+\n+    def test_invalid_numeric_values(self):\n+        for value in ('', '-1', '+1', '1.0', 'True', 'false', '1e2', '1 2', '١', '１２', '²'):\n+            for field in ('quantity', 'unit_price_cents'):\n+                fields = {'quantity': '1', 'unit_price_cents': '150'}\n+                fields[field] = value\n+                with self.subTest(value=value, field=field), self.assertRaises(ValueError):\n+                    load_orders(HEADER + f'A1,BOOK,{fields[\"quantity\"]},{fields[\"unit_price_cents\"]}\\n')\n+\n+    def test_malformed_csv_raises_value_error(self):\n+        with self.assertRaises(ValueError):\n+            load_orders(HEADER + 'A1,\"unterminated,1,150\\n')\n+\n+\n+class CsvCliTests(unittest.TestCase):\n+    def run_cli(self, command, text):\n+        with tempfile.TemporaryDirectory() as directory:\n+            path = Path(directory) / 'input'\n+            path.write_bytes(text.encode('utf-8'))\n+            result = subprocess.run(\n+                [sys.executable, '-m', 'cartkit.cli', command, str(path)],\n+                capture_output=True, text=True, check=True,\n+            )\n+        return json.loads(result.stdout)\n+\n+    def test_import_csv(self):\n+        text = HEADER + 'A1,\"BOOK\\r\\nSET\",2,150\\r\\n'\n+        self.assertEqual(self.run_cli('import-csv', text), load_orders(text))\n+\n+    def test_totals_still_accepts_json(self):\n+        result = self.run_cli('totals', '[{\"quantity\": 2, \"unit_price_cents\": 150}]')\n+        self.assertEqual(result['total_cents'], 300)\n+\n+    def test_summary_still_accepts_json(self):\n+        result = self.run_cli('summary', '[{\"customer\": \"A\", \"status\": \"paid\", \"total_cents\": 300}]')\n+        self.assertEqual(result['paid_total_cents'], 300)\n+        self.assertEqual(result['customers'], {'A': 300})\n+\n+\n+if __name__ == '__main__':\n+    unittest.main()\n",
+                "status": "added",
+                "additions": 108,
+                "deletions": 0
+              }
+            ],
+            "truncated": false
+          }
+        },
+        "time": {
+          "created": 1794367742790,
+          "ran": 1794367782661,
+          "completed": 1794367782672
+        }
+      }
+    ],
+    "snapshot": {
+      "start": "39732d666ad327cf76fab7ef467490f3dee060d2",
+      "end": "53e0f786d0a7c6c7e4da5d6fcfcb8a247ced5b7c",
+      "files": [
+        "cartkit/cli.py",
+        "cartkit/csvio.py",
+        "tests/test_csvio.py"
+      ]
+    },
+    "finish": "tool-calls",
+    "native": {
+      "responseId": "resp_0d7e8a0e5c0b4669016af3e0f5d89087d0a6b20627af40819a",
+      "serviceTier": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 729,
+      "output": 2203,
+      "reasoning": 98,
+      "cache": {
+        "read": 5120,
+        "write": 0
+      }
+    }
+  },
+  {
+    "id": "msg_1c8a781c8001QiM5LElrMba2nM",
+    "time": {
+      "created": 1794367783371,
+      "streamed": 1794367788908,
+      "completed": 1794367788915
+    },
+    "type": "assistant",
+    "agent": "build",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "medium"
+    },
+    "content": [
+      {
+        "type": "tool",
+        "id": "call_fe6a02693355480fa8ce612e90db26e3",
+        "name": "shell",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e12b7b7487d0b4ab5291d397c1c2"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "python3 -m unittest discover -s tests -v"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "test_import_csv (test_csvio.CsvCliTests.test_import_csv) ... ok\ntest_summary_still_accepts_json (test_csvio.CsvCliTests.test_summary_still_accepts_json) ... ok\ntest_totals_still_accepts_json (test_csvio.CsvCliTests.test_totals_still_accepts_json) ... ok\ntest_grouping_and_line_order_with_duplicate_skus (test_csvio.LoadOrdersTests.test_grouping_and_line_order_with_duplicate_skus) ... ok\ntest_header_only_and_blank_rows (test_csvio.LoadOrdersTests.test_header_only_and_blank_rows) ... ok\ntest_invalid_headers (test_csvio.LoadOrdersTests.test_invalid_headers) ... ok\ntest_invalid_numeric_values (test_csvio.LoadOrdersTests.test_invalid_numeric_values) ... ok\ntest_invalid_row_shapes_and_identifiers (test_csvio.LoadOrdersTests.test_invalid_row_shapes_and_identifiers) ... ok\ntest_malformed_csv_raises_value_error (test_csvio.LoadOrdersTests.test_malformed_csv_raises_value_error) ... ok\ntest_quoted_commas_newlines_and_escaped_quotes (test_csvio.LoadOrdersTests.test_quoted_commas_newlines_and_escaped_quotes) ... ok\ntest_reordered_trimmed_headers_and_values (test_csvio.LoadOrdersTests.test_reordered_trimmed_headers_and_values) ... ok\ntest_default_quantity (test_existing.ExistingTests.test_default_quantity) ... ok\ntest_invalid_discount (test_existing.ExistingTests.test_invalid_discount) ... ok\ntest_list_report (test_existing.ExistingTests.test_list_report) ... ok\ntest_regular_total (test_existing.ExistingTests.test_regular_total) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.080s\n\nOK\n"
+            }
+          ],
+          "metadata": {
+            "status": "completed",
+            "truncated": false,
+            "exit": 0
+          }
+        },
+        "time": {
+          "created": 1794367788363,
+          "ran": 1794367788365,
+          "completed": 1794367788502
+        }
+      },
+      {
+        "type": "tool",
+        "id": "call_1b6eba75ee1f472ea0333677b9ae8ff4",
+        "name": "shell",
+        "executed": false,
+        "native": {
+          "itemId": "fc_0d7e8a0e5c0b4669016af3e12c52a887d093fa70bb2da95b18"
+        },
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "git diff --check"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "(no output)"
+            }
+          ],
+          "metadata": {
+            "status": "completed",
+            "truncated": false,
+            "exit": 0
+          }
+        },
+        "time": {
+          "created": 1794367788366,
+          "ran": 1794367788370,
+          "completed": 1794367788379
+        }
+      }
+    ],
+    "snapshot": {
+      "start": "53e0f786d0a7c6c7e4da5d6fcfcb8a247ced5b7c",
+      "end": "53e0f786d0a7c6c7e4da5d6fcfcb8a247ced5b7c",
+      "files": []
+    },
+    "finish": "tool-calls",
+    "native": {
+      "responseId": "resp_0d7e8a0e5c0b4669016af3e1290e0887d09a7a31107f759f29",
+      "serviceTier": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 124,
+      "output": 59,
+      "reasoning": 0,
+      "cache": {
+        "read": 8064,
+        "write": 0
+      }
+    }
+  },
+  {
+    "id": "msg_1c8a79779001KBThi2umuTiY3I",
+    "time": {
+      "created": 1794367788924,
+      "streamed": 1794367794808,
+      "completed": 1794367794817
+    },
+    "type": "assistant",
+    "agent": "build",
+    "model": {
+      "id": "gpt-6.1-sol",
+      "providerID": "openai",
+      "variant": "medium"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Implemented `cartkit.csvio.load_orders(text)` and `python3 -m cartkit.cli import-csv path.csv`, with JSON output.\n\nAdded focused validation, grouping, quoted CSV, and CLI tests. Existing tests are unchanged; totals and summary still work.\n\nChecks: all 15 tests pass; `git diff --check` passes.",
+        "native": {
+          "itemId": "msg_0d7e8a0e5c0b4669016af3e1316eb887d081b74e9172112708",
+          "phase": "final_answer"
+        }
+      }
+    ],
+    "snapshot": {
+      "start": "53e0f786d0a7c6c7e4da5d6fcfcb8a247ced5b7c",
+      "end": "53e0f786d0a7c6c7e4da5d6fcfcb8a247ced5b7c",
+      "files": []
+    },
+    "finish": "stop",
+    "native": {
+      "responseId": "resp_0d7e8a0e5c0b4669016af3e12ec8ac87d0831d5e87b9946227",
+      "serviceTier": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 557,
+      "output": 73,
+      "reasoning": 0,
+      "cache": {
+        "read": 8064,
+        "write": 0
+      }
+    }
+  },
+  {
+    "id": "msg_1c8a7ae84001wNOB5hbksA6Eao",
+    "time": {
+      "created": 1794367794820
+    },
+    "type": "idle",
+    "outcome": "succeeded"
+  }
+]

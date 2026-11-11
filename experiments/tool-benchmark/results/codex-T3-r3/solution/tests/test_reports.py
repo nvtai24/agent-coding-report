@@ -1,0 +1,92 @@
+import copy
+import unittest
+
+from cartkit.reports import customer_totals, summarize_orders
+
+
+class SinglePassOrders:
+    """Fail if a report requests another traversal of its input."""
+
+    def __init__(self, orders):
+        self.orders = orders
+        self.iterations = 0
+        self.visited = []
+
+    def __iter__(self):
+        self.iterations += 1
+        if self.iterations != 1:
+            raise AssertionError('Orders traversed more than once')
+        return self._iterate()
+
+    def _iterate(self):
+        for order in self.orders:
+            self.visited.append(order)
+            yield order
+
+
+class ReportTests(unittest.TestCase):
+    def setUp(self):
+        self.orders = [
+            {'customer': 'pending', 'status': 'pending', 'total_cents': 900},
+            {'customer': 'B', 'status': 'paid', 'total_cents': 0},
+            {'customer': 'cancelled', 'status': 'cancelled', 'total_cents': 500},
+            {'customer': 'A', 'status': 'paid', 'total_cents': 200},
+            {'customer': 'A', 'status': 'paid', 'total_cents': 100},
+            {'customer': 'C', 'status': 'paid', 'total_cents': 0},
+            {'status': 'pending'},
+            {'status': 'cancelled'},
+        ]
+        self.customers = {'B': 0, 'A': 300, 'C': 0}
+        self.summary = {
+            'paid_count': 4,
+            'paid_total_cents': 300,
+            'cancelled_count': 2,
+            'customers': self.customers,
+        }
+
+    def test_mixed_statuses_for_lists_and_generators(self):
+        for report, expected in (
+            (customer_totals, self.customers),
+            (summarize_orders, self.summary),
+        ):
+            for use_generator in (False, True):
+                with self.subTest(report=report.__name__, generator=use_generator):
+                    before = copy.deepcopy(self.orders)
+                    orders = (order for order in self.orders) if use_generator else self.orders
+                    result = report(orders)
+                    self.assertEqual(result, expected)
+                    customers = result if report is customer_totals else result['customers']
+                    self.assertEqual(list(customers), ['B', 'A', 'C'])
+                    self.assertEqual(self.orders, before)
+                    if use_generator:
+                        self.assertEqual(list(orders), [])
+
+    def test_each_report_consumes_input_exactly_once(self):
+        for report, expected in (
+            (customer_totals, self.customers),
+            (summarize_orders, self.summary),
+        ):
+            with self.subTest(report=report.__name__):
+                orders = SinglePassOrders(self.orders)
+                self.assertEqual(report(orders), expected)
+                self.assertEqual(orders.iterations, 1)
+                self.assertEqual(orders.visited, self.orders)
+
+    def test_empty_inputs(self):
+        empty_summary = {
+            'paid_count': 0,
+            'paid_total_cents': 0,
+            'cancelled_count': 0,
+            'customers': {},
+        }
+        for report, expected in (
+            (customer_totals, {}),
+            (summarize_orders, empty_summary),
+        ):
+            for orders in ([], (order for order in []), SinglePassOrders([])):
+                with self.subTest(report=report.__name__, input_type=type(orders).__name__):
+                    self.assertEqual(report(orders), expected)
+
+
+if __name__ == '__main__':
+    unittest.main()

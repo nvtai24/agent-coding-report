@@ -1,0 +1,20 @@
+test_import_csv (test_csvio.CliTests.test_import_csv) ... ok
+test_summary_still_works (test_csvio.CliTests.test_summary_still_works) ... ok
+test_totals_still_work (test_csvio.CliTests.test_totals_still_work) ... ok
+test_groups_orders_and_preserves_duplicate_lines (test_csvio.CsvImportTests.test_groups_orders_and_preserves_duplicate_lines) ... ok
+test_header_only (test_csvio.CsvImportTests.test_header_only) ... ok
+test_invalid_headers (test_csvio.CsvImportTests.test_invalid_headers) ... ok
+test_invalid_numbers_in_both_columns (test_csvio.CsvImportTests.test_invalid_numbers_in_both_columns) ... ok
+test_invalid_row_shapes_and_identifiers (test_csvio.CsvImportTests.test_invalid_row_shapes_and_identifiers) ... ok
+test_malformed_csv (test_csvio.CsvImportTests.test_malformed_csv) ... ok
+test_quoted_commas_newlines_and_escaped_quotes (test_csvio.CsvImportTests.test_quoted_commas_newlines_and_escaped_quotes) ... ok
+test_reordered_headers_whitespace_zeros_and_blank_rows (test_csvio.CsvImportTests.test_reordered_headers_whitespace_zeros_and_blank_rows) ... ok
+test_default_quantity (test_existing.ExistingTests.test_default_quantity) ... ok
+test_invalid_discount (test_existing.ExistingTests.test_invalid_discount) ... ok
+test_list_report (test_existing.ExistingTests.test_list_report) ... ok
+test_regular_total (test_existing.ExistingTests.test_regular_total) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.070s
+
+OK

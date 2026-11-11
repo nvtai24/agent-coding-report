@@ -1,0 +1,1385 @@
+[
+  {
+    "name": "plugin",
+    "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+    "prompt": "Call lab_echo with text PORT_OK once. Report its returned value.",
+    "result": {
+      "info": {
+        "parentID": "msg_1c86f48c0001RxgnnOg2Uedtjj",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode-lab/project-v1",
+          "root": "/tmp/opencode-lab/project-v1"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 8333,
+          "input": 130,
+          "output": 11,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 8192
+          }
+        },
+        "modelID": "minimax-m3.1-flash-free",
+        "providerID": "opencode",
+        "time": {
+          "created": 1794364101718,
+          "completed": 1794364103721
+        },
+        "finish": "stop",
+        "id": "msg_1c86f5456001u8l3t4scHuneJH",
+        "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw"
+      },
+      "parts": [
+        {
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-start",
+          "id": "prt_1c86f5b86001ldD8p01twP519v",
+          "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+          "messageID": "msg_1c86f5456001u8l3t4scHuneJH"
+        },
+        {
+          "type": "text",
+          "text": "`MIGRATION_PLUGIN:PORT_OK`",
+          "time": {
+            "start": 1794364103559,
+            "end": 1794364103698
+          },
+          "id": "prt_1c86f5b87001BcuguyTcRgnn9t",
+          "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+          "messageID": "msg_1c86f5456001u8l3t4scHuneJH"
+        },
+        {
+          "reason": "stop",
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-finish",
+          "tokens": {
+            "total": 8333,
+            "input": 130,
+            "output": 11,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 8192
+            }
+          },
+          "cost": 0,
+          "id": "prt_1c86f5c1d001EjlFE55SvxWSRW",
+          "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+          "messageID": "msg_1c86f5456001u8l3t4scHuneJH"
+        }
+      ]
+    },
+    "messages": [
+      {
+        "info": {
+          "id": "msg_1c86f48c0001RxgnnOg2Uedtjj",
+          "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+          "role": "user",
+          "time": {
+            "created": 1794364098752
+          },
+          "summary": {
+            "diffs": []
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "opencode",
+            "modelID": "minimax-m3.1-flash-free"
+          }
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f48c5001rEF6SW6cBA6TA3",
+            "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+            "messageID": "msg_1c86f48c0001RxgnnOg2Uedtjj",
+            "type": "text",
+            "text": "Call lab_echo with text PORT_OK once. Report its returned value."
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c86f49e9001BE1uTIWa4fqycT",
+          "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+          "role": "assistant",
+          "time": {
+            "created": 1794364099049,
+            "completed": 1794364101716
+          },
+          "parentID": "msg_1c86f48c0001RxgnnOg2Uedtjj",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8301,
+            "input": 6479,
+            "output": 30,
+            "reasoning": 0,
+            "cache": {
+              "read": 1792,
+              "write": 0
+            }
+          },
+          "finish": "tool-calls"
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f5387001lrGjH8IC3IdZpV",
+            "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+            "messageID": "msg_1c86f49e9001BE1uTIWa4fqycT",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c86f5434001S2Fdm87KhdUXis",
+            "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+            "messageID": "msg_1c86f49e9001BE1uTIWa4fqycT",
+            "type": "tool",
+            "callID": "call_617d727aa8b547c880bf0728",
+            "tool": "lab_echo",
+            "state": {
+              "status": "completed",
+              "input": {
+                "text": "PORT_OK"
+              },
+              "output": "MIGRATION_PLUGIN:PORT_OK",
+              "title": "",
+              "metadata": {
+                "truncated": false
+              },
+              "time": {
+                "start": 1794364101689,
+                "end": 1794364101693
+              }
+            }
+          },
+          {
+            "id": "prt_1c86f5448001PzefmInMV1ksio",
+            "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+            "messageID": "msg_1c86f49e9001BE1uTIWa4fqycT",
+            "type": "step-finish",
+            "reason": "tool-calls",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8301,
+              "input": 6479,
+              "output": 30,
+              "reasoning": 0,
+              "cache": {
+                "read": 1792,
+                "write": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c86f5456001u8l3t4scHuneJH",
+          "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+          "role": "assistant",
+          "time": {
+            "created": 1794364101718,
+            "completed": 1794364103721
+          },
+          "parentID": "msg_1c86f48c0001RxgnnOg2Uedtjj",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8333,
+            "input": 130,
+            "output": 11,
+            "reasoning": 0,
+            "cache": {
+              "read": 8192,
+              "write": 0
+            }
+          },
+          "finish": "stop"
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f5b86001ldD8p01twP519v",
+            "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+            "messageID": "msg_1c86f5456001u8l3t4scHuneJH",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c86f5b87001BcuguyTcRgnn9t",
+            "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+            "messageID": "msg_1c86f5456001u8l3t4scHuneJH",
+            "type": "text",
+            "text": "`MIGRATION_PLUGIN:PORT_OK`",
+            "time": {
+              "start": 1794364103559,
+              "end": 1794364103698
+            }
+          },
+          {
+            "id": "prt_1c86f5c1d001EjlFE55SvxWSRW",
+            "sessionID": "ses_e3790b751ffeXkbwt6LOcawNvw",
+            "messageID": "msg_1c86f5456001u8l3t4scHuneJH",
+            "type": "step-finish",
+            "reason": "stop",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8333,
+              "input": 130,
+              "output": 11,
+              "reasoning": 0,
+              "cache": {
+                "read": 8192,
+                "write": 0
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "children": [],
+    "elapsedMs": 5081,
+    "events": 37
+  },
+  {
+    "name": "allow",
+    "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+    "prompt": "Use bash to execute exactly the command string \"printf LAB_ALLOW\". Report the output.",
+    "result": {
+      "info": {
+        "parentID": "msg_1c86f5c44001XvEyaFZe0DuTaR",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode-lab/project-v1",
+          "root": "/tmp/opencode-lab/project-v1"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 8346,
+          "input": 130,
+          "output": 24,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 8192
+          }
+        },
+        "modelID": "minimax-m3.1-flash-free",
+        "providerID": "opencode",
+        "time": {
+          "created": 1794364107548,
+          "completed": 1794364109044
+        },
+        "finish": "stop",
+        "id": "msg_1c86f6b1c001LuDD9HTpv6auXa",
+        "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU"
+      },
+      "parts": [
+        {
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-start",
+          "id": "prt_1c86f7029001d3iPKiCFPH9ylD",
+          "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+          "messageID": "msg_1c86f6b1c001LuDD9HTpv6auXa"
+        },
+        {
+          "type": "text",
+          "text": "Output: `LAB_ALLOW` (no trailing newline, since `printf` was used without `\\n`).",
+          "time": {
+            "start": 1794364108842,
+            "end": 1794364109025
+          },
+          "id": "prt_1c86f702a001ChOHOML40whTXw",
+          "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+          "messageID": "msg_1c86f6b1c001LuDD9HTpv6auXa"
+        },
+        {
+          "reason": "stop",
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-finish",
+          "tokens": {
+            "total": 8346,
+            "input": 130,
+            "output": 24,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 8192
+            }
+          },
+          "cost": 0,
+          "id": "prt_1c86f70e9001FO1Jt6sRaXnZby",
+          "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+          "messageID": "msg_1c86f6b1c001LuDD9HTpv6auXa"
+        }
+      ]
+    },
+    "messages": [
+      {
+        "info": {
+          "id": "msg_1c86f5c44001XvEyaFZe0DuTaR",
+          "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+          "role": "user",
+          "time": {
+            "created": 1794364103748
+          },
+          "summary": {
+            "diffs": []
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "opencode",
+            "modelID": "minimax-m3.1-flash-free"
+          }
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f5c45001lgQuDrvuQjZz8z",
+            "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+            "messageID": "msg_1c86f5c44001XvEyaFZe0DuTaR",
+            "type": "text",
+            "text": "Use bash to execute exactly the command string \"printf LAB_ALLOW\". Report the output."
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c86f5c4a0016FjqFecq7FLdRC",
+          "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+          "role": "assistant",
+          "time": {
+            "created": 1794364103754,
+            "completed": 1794364107546
+          },
+          "parentID": "msg_1c86f5c44001XvEyaFZe0DuTaR",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8304,
+            "input": 8146,
+            "output": 30,
+            "reasoning": 0,
+            "cache": {
+              "read": 128,
+              "write": 0
+            }
+          },
+          "finish": "tool-calls"
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f64a00017WSVXsRZXBC1Y4",
+            "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+            "messageID": "msg_1c86f5c4a0016FjqFecq7FLdRC",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c86f6a72001dl9iJ1nuxccjeX",
+            "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+            "messageID": "msg_1c86f5c4a0016FjqFecq7FLdRC",
+            "type": "tool",
+            "callID": "call-37e56ef4-b5b6-4a16-b07d-123318d712f2",
+            "tool": "bash",
+            "state": {
+              "status": "completed",
+              "input": {
+                "command": "printf LAB_ALLOW"
+              },
+              "output": "LAB_ALLOW",
+              "title": "printf LAB_ALLOW",
+              "metadata": {
+                "output": "LAB_ALLOW",
+                "exit": 0,
+                "truncated": false
+              },
+              "time": {
+                "start": 1794364107483,
+                "end": 1794364107514
+              }
+            }
+          },
+          {
+            "id": "prt_1c86f6b10001B1nHz1xtaELPtu",
+            "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+            "messageID": "msg_1c86f5c4a0016FjqFecq7FLdRC",
+            "type": "step-finish",
+            "reason": "tool-calls",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8304,
+              "input": 8146,
+              "output": 30,
+              "reasoning": 0,
+              "cache": {
+                "read": 128,
+                "write": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c86f6b1c001LuDD9HTpv6auXa",
+          "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+          "role": "assistant",
+          "time": {
+            "created": 1794364107548,
+            "completed": 1794364109044
+          },
+          "parentID": "msg_1c86f5c44001XvEyaFZe0DuTaR",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8346,
+            "input": 130,
+            "output": 24,
+            "reasoning": 0,
+            "cache": {
+              "read": 8192,
+              "write": 0
+            }
+          },
+          "finish": "stop"
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f7029001d3iPKiCFPH9ylD",
+            "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+            "messageID": "msg_1c86f6b1c001LuDD9HTpv6auXa",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c86f702a001ChOHOML40whTXw",
+            "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+            "messageID": "msg_1c86f6b1c001LuDD9HTpv6auXa",
+            "type": "text",
+            "text": "Output: `LAB_ALLOW` (no trailing newline, since `printf` was used without `\\n`).",
+            "time": {
+              "start": 1794364108842,
+              "end": 1794364109025
+            }
+          },
+          {
+            "id": "prt_1c86f70e9001FO1Jt6sRaXnZby",
+            "sessionID": "ses_e3790a3c0ffeebNQpNcNf2UjHU",
+            "messageID": "msg_1c86f6b1c001LuDD9HTpv6auXa",
+            "type": "step-finish",
+            "reason": "stop",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8346,
+              "input": 130,
+              "output": 24,
+              "reasoning": 0,
+              "cache": {
+                "read": 8192,
+                "write": 0
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "children": [],
+    "elapsedMs": 5316,
+    "events": 42
+  },
+  {
+    "name": "ask",
+    "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+    "prompt": "Use bash to execute exactly the command string \"printf LAB_ASK\". Wait if approval is requested and report its output.",
+    "result": {
+      "info": {
+        "parentID": "msg_1c86f7103001G45Afyw0WMzofU",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode-lab/project-v1",
+          "root": "/tmp/opencode-lab/project-v1"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 8358,
+          "input": 54,
+          "output": 25,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 8279
+          }
+        },
+        "modelID": "minimax-m3.1-flash-free",
+        "providerID": "opencode",
+        "time": {
+          "created": 1794364111379,
+          "completed": 1794364114597
+        },
+        "finish": "stop",
+        "id": "msg_1c86f7a13001h5sY9dWFsstYm2",
+        "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx"
+      },
+      "parts": [
+        {
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-start",
+          "id": "prt_1c86f8690001GM8GElQ8214heH",
+          "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+          "messageID": "msg_1c86f7a13001h5sY9dWFsstYm2"
+        },
+        {
+          "type": "text",
+          "text": "Output: `LAB_ASK` (no approval was requested; the command ran and printed `LAB_ASK`).",
+          "time": {
+            "start": 1794364114577,
+            "end": 1794364114579
+          },
+          "id": "prt_1c86f8691001m9hNMN8OP0fqqw",
+          "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+          "messageID": "msg_1c86f7a13001h5sY9dWFsstYm2"
+        },
+        {
+          "reason": "stop",
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-finish",
+          "tokens": {
+            "total": 8358,
+            "input": 54,
+            "output": 25,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 8279
+            }
+          },
+          "cost": 0,
+          "id": "prt_1c86f869c0017ADvF3J1oDCnhE",
+          "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+          "messageID": "msg_1c86f7a13001h5sY9dWFsstYm2"
+        }
+      ]
+    },
+    "messages": [
+      {
+        "info": {
+          "id": "msg_1c86f7103001G45Afyw0WMzofU",
+          "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+          "role": "user",
+          "time": {
+            "created": 1794364109059
+          },
+          "summary": {
+            "diffs": []
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "opencode",
+            "modelID": "minimax-m3.1-flash-free"
+          }
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f7104001jHmf7ololUlqoB",
+            "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+            "messageID": "msg_1c86f7103001G45Afyw0WMzofU",
+            "type": "text",
+            "text": "Use bash to execute exactly the command string \"printf LAB_ASK\". Wait if approval is requested and report its output."
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c86f7107001XjG5OdZMmPrZjm",
+          "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+          "role": "assistant",
+          "time": {
+            "created": 1794364109063,
+            "completed": 1794364111377
+          },
+          "parentID": "msg_1c86f7103001G45Afyw0WMzofU",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8315,
+            "input": 8092,
+            "output": 35,
+            "reasoning": 0,
+            "cache": {
+              "read": 188,
+              "write": 0
+            }
+          },
+          "finish": "tool-calls"
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f788e001QLLl8o8top6o7P",
+            "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+            "messageID": "msg_1c86f7107001XjG5OdZMmPrZjm",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c86f795c001iGLNZR0Al8p8nQ",
+            "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+            "messageID": "msg_1c86f7107001XjG5OdZMmPrZjm",
+            "type": "text",
+            "text": "I'll run that command.",
+            "time": {
+              "start": 1794364111196,
+              "end": 1794364111357
+            }
+          },
+          {
+            "id": "prt_1c86f795d001L94G2IaNOBQD8L",
+            "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+            "messageID": "msg_1c86f7107001XjG5OdZMmPrZjm",
+            "type": "tool",
+            "callID": "call_DP6gmSF09b7NSCNqSe6RTI82",
+            "tool": "bash",
+            "state": {
+              "status": "completed",
+              "input": {
+                "command": "printf LAB_ASK"
+              },
+              "output": "LAB_ASK",
+              "title": "printf LAB_ASK",
+              "metadata": {
+                "output": "LAB_ASK",
+                "exit": 0,
+                "truncated": false
+              },
+              "time": {
+                "start": 1794364111239,
+                "end": 1794364111250
+              }
+            }
+          },
+          {
+            "id": "prt_1c86f7a06001VUvrowLpIjgC9H",
+            "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+            "messageID": "msg_1c86f7107001XjG5OdZMmPrZjm",
+            "type": "step-finish",
+            "reason": "tool-calls",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8315,
+              "input": 8092,
+              "output": 35,
+              "reasoning": 0,
+              "cache": {
+                "read": 188,
+                "write": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c86f7a13001h5sY9dWFsstYm2",
+          "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+          "role": "assistant",
+          "time": {
+            "created": 1794364111379,
+            "completed": 1794364114597
+          },
+          "parentID": "msg_1c86f7103001G45Afyw0WMzofU",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8358,
+            "input": 54,
+            "output": 25,
+            "reasoning": 0,
+            "cache": {
+              "read": 8279,
+              "write": 0
+            }
+          },
+          "finish": "stop"
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f8690001GM8GElQ8214heH",
+            "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+            "messageID": "msg_1c86f7a13001h5sY9dWFsstYm2",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c86f8691001m9hNMN8OP0fqqw",
+            "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+            "messageID": "msg_1c86f7a13001h5sY9dWFsstYm2",
+            "type": "text",
+            "text": "Output: `LAB_ASK` (no approval was requested; the command ran and printed `LAB_ASK`).",
+            "time": {
+              "start": 1794364114577,
+              "end": 1794364114579
+            }
+          },
+          {
+            "id": "prt_1c86f869c0017ADvF3J1oDCnhE",
+            "sessionID": "ses_e37908effffe1lWBNQ96uoSUdx",
+            "messageID": "msg_1c86f7a13001h5sY9dWFsstYm2",
+            "type": "step-finish",
+            "reason": "stop",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8358,
+              "input": 54,
+              "output": 25,
+              "reasoning": 0,
+              "cache": {
+                "read": 8279,
+                "write": 0
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "children": [],
+    "elapsedMs": 5551,
+    "events": 46
+  },
+  {
+    "name": "deny",
+    "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+    "prompt": "Attempt exactly the bash command string \"printf LAB_DENY\" once. If denied, report the denial and stop. Do not work around permission.",
+    "result": {
+      "info": {
+        "parentID": "msg_1c86f86b20014szySMNHBHwum6",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode-lab/project-v1",
+          "root": "/tmp/opencode-lab/project-v1"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 8448,
+          "input": 219,
+          "output": 37,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 8192
+          }
+        },
+        "modelID": "minimax-m3.1-flash-free",
+        "providerID": "opencode",
+        "time": {
+          "created": 1794364117665,
+          "completed": 1794364120739
+        },
+        "finish": "stop",
+        "id": "msg_1c86f92a1001VDWWMn7JHcbP0V",
+        "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn"
+      },
+      "parts": [
+        {
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-start",
+          "id": "prt_1c86f9c2a001nvcRcSqfu70Xyq",
+          "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+          "messageID": "msg_1c86f92a1001VDWWMn7JHcbP0V"
+        },
+        {
+          "type": "text",
+          "text": "Denied — the bash rule for `printf LAB_DENY` is set to `deny`, so the command was not executed. Stopping here without attempting any workaround.",
+          "time": {
+            "start": 1794364120108,
+            "end": 1794364120720
+          },
+          "id": "prt_1c86f9c2c001Cwtv7vBUf6orr2",
+          "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+          "messageID": "msg_1c86f92a1001VDWWMn7JHcbP0V"
+        },
+        {
+          "reason": "stop",
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-finish",
+          "tokens": {
+            "total": 8448,
+            "input": 219,
+            "output": 37,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 8192
+            }
+          },
+          "cost": 0,
+          "id": "prt_1c86f9e9a0018fW6vtlq7pNGV6",
+          "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+          "messageID": "msg_1c86f92a1001VDWWMn7JHcbP0V"
+        }
+      ]
+    },
+    "messages": [
+      {
+        "info": {
+          "id": "msg_1c86f86b20014szySMNHBHwum6",
+          "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+          "role": "user",
+          "time": {
+            "created": 1794364114610
+          },
+          "summary": {
+            "diffs": []
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "opencode",
+            "modelID": "minimax-m3.1-flash-free"
+          }
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f86b3001YoJzmNZwmkcNOV",
+            "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+            "messageID": "msg_1c86f86b20014szySMNHBHwum6",
+            "type": "text",
+            "text": "Attempt exactly the bash command string \"printf LAB_DENY\" once. If denied, report the denial and stop. Do not work around permission."
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c86f86b6001gXoV9TldCr9rFQ",
+          "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+          "role": "assistant",
+          "time": {
+            "created": 1794364114614,
+            "completed": 1794364117663
+          },
+          "parentID": "msg_1c86f86b20014szySMNHBHwum6",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8317,
+            "input": 94,
+            "output": 31,
+            "reasoning": 0,
+            "cache": {
+              "read": 8192,
+              "write": 0
+            }
+          },
+          "finish": "tool-calls"
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f90f7001RIGY7rNK6a4iJg",
+            "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+            "messageID": "msg_1c86f86b6001gXoV9TldCr9rFQ",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c86f91a3001a3ekphM0PkRMuL",
+            "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+            "messageID": "msg_1c86f86b6001gXoV9TldCr9rFQ",
+            "type": "tool",
+            "callID": "call_7829f19c83904c08be98be75",
+            "tool": "bash",
+            "state": {
+              "status": "error",
+              "input": {
+                "command": "printf LAB_DENY"
+              },
+              "error": "The user has specified a rule which prevents you from using this specific tool call. Here are some of the relevant rules [{\"permission\":\"*\",\"action\":\"allow\",\"pattern\":\"*\"},{\"permission\":\"bash\",\"pattern\":\"*\",\"action\":\"allow\"},{\"permission\":\"bash\",\"pattern\":\"printf LAB_ASK\",\"action\":\"ask\"},{\"permission\":\"bash\",\"pattern\":\"printf LAB_DENY\",\"action\":\"deny\"}]",
+              "time": {
+                "start": 1794364117414,
+                "end": 1794364117416
+              }
+            }
+          },
+          {
+            "id": "prt_1c86f9297001S5QTNXmThBMGV5",
+            "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+            "messageID": "msg_1c86f86b6001gXoV9TldCr9rFQ",
+            "type": "step-finish",
+            "reason": "tool-calls",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8317,
+              "input": 94,
+              "output": 31,
+              "reasoning": 0,
+              "cache": {
+                "read": 8192,
+                "write": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c86f92a1001VDWWMn7JHcbP0V",
+          "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+          "role": "assistant",
+          "time": {
+            "created": 1794364117665,
+            "completed": 1794364120739
+          },
+          "parentID": "msg_1c86f86b20014szySMNHBHwum6",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8448,
+            "input": 219,
+            "output": 37,
+            "reasoning": 0,
+            "cache": {
+              "read": 8192,
+              "write": 0
+            }
+          },
+          "finish": "stop"
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f9c2a001nvcRcSqfu70Xyq",
+            "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+            "messageID": "msg_1c86f92a1001VDWWMn7JHcbP0V",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c86f9c2c001Cwtv7vBUf6orr2",
+            "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+            "messageID": "msg_1c86f92a1001VDWWMn7JHcbP0V",
+            "type": "text",
+            "text": "Denied — the bash rule for `printf LAB_DENY` is set to `deny`, so the command was not executed. Stopping here without attempting any workaround.",
+            "time": {
+              "start": 1794364120108,
+              "end": 1794364120720
+            }
+          },
+          {
+            "id": "prt_1c86f9e9a0018fW6vtlq7pNGV6",
+            "sessionID": "ses_e37907951ffeJgKCKsTuBA8lpn",
+            "messageID": "msg_1c86f92a1001VDWWMn7JHcbP0V",
+            "type": "step-finish",
+            "reason": "stop",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8448,
+              "input": 219,
+              "output": 37,
+              "reasoning": 0,
+              "cache": {
+                "read": 8192,
+                "write": 0
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "children": [],
+    "elapsedMs": 6146,
+    "events": 42
+  },
+  {
+    "name": "background-subagent",
+    "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+    "prompt": "Call task with subagent_type=general, background=true. Give it this task: run bash command \"sleep 5; printf CHILD_DONE\", then reply CHILD_DONE. After task returns running immediately reply PARENT_FREE. Do not poll.",
+    "result": {
+      "info": {
+        "parentID": "msg_1c86f9eb40018ovBJ3qjr528mK",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode-lab/project-v1",
+          "root": "/tmp/opencode-lab/project-v1"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 8454,
+          "input": 257,
+          "output": 5,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 8192
+          }
+        },
+        "modelID": "minimax-m3.1-flash-free",
+        "providerID": "opencode",
+        "time": {
+          "created": 1794364133061,
+          "completed": 1794364135085
+        },
+        "finish": "stop",
+        "id": "msg_1c86fcec4001qDV30xIfRIvNx1",
+        "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi"
+      },
+      "parts": [
+        {
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-start",
+          "id": "prt_1c86fd601001KNYkQ5Vxz7nDTB",
+          "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+          "messageID": "msg_1c86fcec4001qDV30xIfRIvNx1"
+        },
+        {
+          "type": "text",
+          "text": "PARENT_FREE",
+          "time": {
+            "start": 1794364134917,
+            "end": 1794364135060
+          },
+          "id": "prt_1c86fd605001G7bb6BB6MaB90l",
+          "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+          "messageID": "msg_1c86fcec4001qDV30xIfRIvNx1"
+        },
+        {
+          "reason": "stop",
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-finish",
+          "tokens": {
+            "total": 8454,
+            "input": 257,
+            "output": 5,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 8192
+            }
+          },
+          "cost": 0,
+          "id": "prt_1c86fd6a0001XuGACDBhdswYFS",
+          "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+          "messageID": "msg_1c86fcec4001qDV30xIfRIvNx1"
+        }
+      ]
+    },
+    "messages": [
+      {
+        "info": {
+          "id": "msg_1c86f9eb40018ovBJ3qjr528mK",
+          "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+          "role": "user",
+          "time": {
+            "created": 1794364120756
+          },
+          "summary": {
+            "diffs": []
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "opencode",
+            "modelID": "minimax-m3.1-flash-free"
+          }
+        },
+        "parts": [
+          {
+            "id": "prt_1c86f9eb5001XPwJPD7CUHxLtK",
+            "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+            "messageID": "msg_1c86f9eb40018ovBJ3qjr528mK",
+            "type": "text",
+            "text": "Call task with subagent_type=general, background=true. Give it this task: run bash command \"sleep 5; printf CHILD_DONE\", then reply CHILD_DONE. After task returns running immediately reply PARENT_FREE. Do not poll."
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c86f9eb8001IL1H85N5AfeIcA",
+          "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+          "role": "assistant",
+          "time": {
+            "created": 1794364120760,
+            "completed": 1794364133059
+          },
+          "parentID": "msg_1c86f9eb40018ovBJ3qjr528mK",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8394,
+            "input": 116,
+            "output": 86,
+            "reasoning": 0,
+            "cache": {
+              "read": 8192,
+              "write": 0
+            }
+          },
+          "finish": "tool-calls"
+        },
+        "parts": [
+          {
+            "id": "prt_1c86fa72b001OaCz47GeXJ0N1t",
+            "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+            "messageID": "msg_1c86f9eb8001IL1H85N5AfeIcA",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c86fa731001wC61UsinFQ3tM0",
+            "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+            "messageID": "msg_1c86f9eb8001IL1H85N5AfeIcA",
+            "type": "text",
+            "text": "I'll launch the background subagent now.",
+            "time": {
+              "start": 1794364122929,
+              "end": 1794364123069
+            }
+          },
+          {
+            "id": "prt_1c86fa780001xDRMglNAsLtXf8",
+            "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+            "messageID": "msg_1c86f9eb8001IL1H85N5AfeIcA",
+            "type": "tool",
+            "callID": "call_bf7ac737dda74a5794b5e5b3",
+            "tool": "task",
+            "state": {
+              "status": "completed",
+              "input": {
+                "description": "Background child task",
+                "subagent_type": "general",
+                "prompt": "Run the following bash command: sleep 5; printf CHILD_DONE\n\nAfter the command completes, reply with exactly: CHILD_DONE"
+              },
+              "output": "<task id=\"ses_e3790587affepLPrszmJL2hC0o\" state=\"completed\">\n<task_result>\nCHILD_DONE\n</task_result>\n</task>",
+              "title": "Background child task",
+              "metadata": {
+                "parentSessionId": "ses_e3790614fffe3oZRu5QGzkaWCi",
+                "sessionId": "ses_e3790587affepLPrszmJL2hC0o",
+                "model": {
+                  "modelID": "minimax-m3.1-flash-free",
+                  "providerID": "opencode"
+                },
+                "truncated": false
+              },
+              "time": {
+                "start": 1794364123015,
+                "end": 1794364133033
+              }
+            }
+          },
+          {
+            "id": "prt_1c86fceb9001gfjeL2BUAQebAx",
+            "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+            "messageID": "msg_1c86f9eb8001IL1H85N5AfeIcA",
+            "type": "step-finish",
+            "reason": "tool-calls",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8394,
+              "input": 116,
+              "output": 86,
+              "reasoning": 0,
+              "cache": {
+                "read": 8192,
+                "write": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c86fcec4001qDV30xIfRIvNx1",
+          "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+          "role": "assistant",
+          "time": {
+            "created": 1794364133061,
+            "completed": 1794364135085
+          },
+          "parentID": "msg_1c86f9eb40018ovBJ3qjr528mK",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8454,
+            "input": 257,
+            "output": 5,
+            "reasoning": 0,
+            "cache": {
+              "read": 8192,
+              "write": 0
+            }
+          },
+          "finish": "stop"
+        },
+        "parts": [
+          {
+            "id": "prt_1c86fd601001KNYkQ5Vxz7nDTB",
+            "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+            "messageID": "msg_1c86fcec4001qDV30xIfRIvNx1",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c86fd605001G7bb6BB6MaB90l",
+            "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+            "messageID": "msg_1c86fcec4001qDV30xIfRIvNx1",
+            "type": "text",
+            "text": "PARENT_FREE",
+            "time": {
+              "start": 1794364134917,
+              "end": 1794364135060
+            }
+          },
+          {
+            "id": "prt_1c86fd6a0001XuGACDBhdswYFS",
+            "sessionID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+            "messageID": "msg_1c86fcec4001qDV30xIfRIvNx1",
+            "type": "step-finish",
+            "reason": "stop",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8454,
+              "input": 257,
+              "output": 5,
+              "reasoning": 0,
+              "cache": {
+                "read": 8192,
+                "write": 0
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "children": [
+      {
+        "id": "ses_e3790587affepLPrszmJL2hC0o",
+        "slug": "shiny-knight",
+        "projectID": "global",
+        "directory": "/tmp/opencode-lab/project-v1",
+        "path": "",
+        "parentID": "ses_e3790614fffe3oZRu5QGzkaWCi",
+        "summary": {
+          "additions": 0,
+          "deletions": 0,
+          "files": 0
+        },
+        "cost": 0,
+        "tokens": {
+          "input": 2123,
+          "output": 56,
+          "reasoning": 0,
+          "cache": {
+            "read": 10752,
+            "write": 0
+          }
+        },
+        "title": "Background child task (@general subagent)",
+        "agent": "general",
+        "model": {
+          "id": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "variant": "default"
+        },
+        "version": "1.19.5",
+        "time": {
+          "created": 1794364123013,
+          "updated": 1794364133040
+        },
+        "permission": [
+          {
+            "permission": "task",
+            "pattern": "*",
+            "action": "deny"
+          }
+        ]
+      }
+    ],
+    "elapsedMs": 29353,
+    "events": 48
+  }
+]

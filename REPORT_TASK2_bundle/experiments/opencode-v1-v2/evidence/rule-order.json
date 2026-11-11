@@ -1,0 +1,1517 @@
+[
+  {
+    "name": "specific-last",
+    "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+    "permissions": [
+      {
+        "action": "shell",
+        "resource": "*",
+        "effect": "ask"
+      },
+      {
+        "action": "shell",
+        "resource": "printf LAB_ORDER",
+        "effect": "allow"
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_1c86e176d001UKKDEOwoVtc00u",
+        "created": 1794364020589,
+        "type": "session.created",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "slug": "playful-island",
+          "version": "2.2.7",
+          "projectID": "global",
+          "location": {
+            "directory": "/tmp/opencode-lab/project-v2"
+          },
+          "subpath": "",
+          "title": "Rule order specific-last",
+          "permissions": [
+            {
+              "action": "shell",
+              "resource": "*",
+              "effect": "ask"
+            },
+            {
+              "action": "shell",
+              "resource": "printf LAB_ORDER",
+              "effect": "allow"
+            }
+          ],
+          "model": {
+            "id": "minimax-m3.1-flash-free",
+            "providerID": "opencode"
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 0,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86e17fe001VMavtuskzbXZwy",
+        "created": 1794364020734,
+        "type": "session.inbox.enqueued",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "inboxID": "msg_1c86e1787001QGWNUvzsojBx78",
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "item": {
+            "type": "user",
+            "payload": {
+              "text": "Use shell to run exactly the command string \"printf LAB_ORDER\" once. Report the output."
+            },
+            "delivery": "steer"
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 1,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86e1802001cvE0sVwtQ0Bro4",
+        "created": 1794364020738,
+        "type": "session.execution.started",
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma"
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 2,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86e180f001DaZDItV6mlzCfE",
+        "created": 1794364020751,
+        "metadata": {
+          "instructions": {
+            "initial": true
+          }
+        },
+        "type": "session.instructions.updated",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "delta": {
+            "core/codemode": "b9321aa27fe3f9eb6662ad886008492dd401333a0049c044c54ac2323b9ead1e",
+            "core/skill-guidance": "8394362d28c82fa4d13c7a9f5568c05680f6687e07db8f426a0e3c92f3027dc9",
+            "core/date": "8fda1d364fef8b5fbcccb039ef94b1ebe3705b3b3a6d558d6d10f92e84ff9e33",
+            "core/environment": "91c540d7ea31450936ef9fac70e908211f6a6633ae7bd7be53449c467f63a099"
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 3,
+          "version": 2
+        }
+      },
+      {
+        "id": "evt_1c86e1811001zWHI4AdJrtGRZS",
+        "created": 1794364020753,
+        "type": "session.inbox.delivered",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "inboxID": "msg_1c86e1787001QGWNUvzsojBx78"
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 4,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86e28b7001rLsVMifv2N8eeC",
+        "created": 1794364025015,
+        "type": "session.step.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "agent": "build",
+          "model": {
+            "id": "minimax-m3.1-flash-free",
+            "providerID": "opencode",
+            "variant": "default"
+          },
+          "assistantMessageID": "msg_1c86e1819001sBeeJTd9Di0m1H",
+          "snapshot": "e3fe92e9694eb8dacea1063fe4a422cca589c329",
+          "started": 1794364020765
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 5,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86e28b90014SrcoHPif5Zj65",
+        "created": 1794364025017,
+        "type": "session.reasoning.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86e1819001sBeeJTd9Di0m1H",
+          "ordinal": 0,
+          "native": {
+            "reasoningField": "reasoning_content"
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 6,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86e291f001ui74x6ZS5JfGc8",
+        "created": 1794364025119,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86e1819001sBeeJTd9Di0m1H",
+          "ordinal": 0,
+          "delta": "The user wants me to run exactly the command"
+        }
+      },
+      {
+        "id": "evt_1c86e2992001JaOak4X1yxSPBS",
+        "created": 1794364025234,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86e1819001sBeeJTd9Di0m1H",
+          "ordinal": 0,
+          "delta": " string \"printf LAB_ORDER\" once and report the output. There's also a `lab_echo` tool that returns a"
+        }
+      },
+      {
+        "id": "evt_1c86e2aee001Rgn6oWcIYyC4yg",
+        "created": 1794364025582,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86e1819001sBeeJTd9Di0m1H",
+          "ordinal": 0,
+          "delta": " marker followed by supplied text — that's a distractor. The instruction says"
+        }
+      },
+      {
+        "id": "evt_1c86f1585001XMqNk5mgq493Dh",
+        "created": 1794364085637,
+        "type": "session.reasoning.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86e1819001sBeeJTd9Di0m1H",
+          "ordinal": 0,
+          "text": "The user wants me to run exactly the command string \"printf LAB_ORDER\" once and report the output. There's also a `lab_echo` tool that returns a marker followed by supplied text — that's a distractor. The instruction says",
+          "native": {
+            "reasoningField": "reasoning_content"
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 7,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f1587001B7WwgH3nQOQhzf",
+        "created": 1794364085639,
+        "type": "session.step.streamed",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86e1819001sBeeJTd9Di0m1H"
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 8,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f1590001GaVP9NJA0i4qrq",
+        "created": 1794364085648,
+        "type": "session.step.failed",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86e1819001sBeeJTd9Di0m1H",
+          "error": {
+            "type": "provider.transport",
+            "message": "Connection lost while reading the response: ECONNRESET: The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()",
+            "status": 200
+          },
+          "snapshot": "e3fe92e9694eb8dacea1063fe4a422cca589c329",
+          "files": []
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 9,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f15930018Ky8w13D739RX1",
+        "created": 1794364085651,
+        "type": "session.retry.scheduled",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86e1819001sBeeJTd9Di0m1H",
+          "attempt": 2,
+          "at": 1794364087254,
+          "error": {
+            "type": "provider.transport",
+            "message": "Connection lost while reading the response: ECONNRESET: The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()",
+            "status": 200
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 10,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f1bd6001gLrRG4oyqyxDVp",
+        "created": 1794364087254,
+        "type": "session.synthetic",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "text": "The previous response was interrupted. Continue from where you left off without repeating completed content."
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 11,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f2934001QPZmGRHoVshXQW",
+        "created": 1794364090676,
+        "type": "session.step.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "agent": "build",
+          "model": {
+            "id": "minimax-m3.1-flash-free",
+            "providerID": "opencode",
+            "variant": "default"
+          },
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "snapshot": "e3fe92e9694eb8dacea1063fe4a422cca589c329",
+          "started": 1794364087264
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 12,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f29360013MJmN4UbFH9JoA",
+        "created": 1794364090678,
+        "type": "session.reasoning.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "native": {
+            "reasoningField": "reasoning_content"
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 13,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f299c001sTXs3UTW2ZY1oL",
+        "created": 1794364090780,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": "The user asked me to run exactly the command string \"printf LAB_ORDER\" once"
+        }
+      },
+      {
+        "id": "evt_1c86f2a07001nYojz7OaPtGBtj",
+        "created": 1794364090887,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": " and report the output. The previous response was interrupted. Let me just run it.\n\nWait"
+        }
+      },
+      {
+        "id": "evt_1c86f2a97001kBvzqsVEuQFFLt",
+        "created": 1794364091031,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": " — there's a subtlety: the command \"printf LAB_ORDER\" without quotes. If run via shell, `"
+        }
+      },
+      {
+        "id": "evt_1c86f2b2a001ja2egETAfmyPAI",
+        "created": 1794364091178,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": "printf LAB_ORDER` prints \"LAB_ORDER\" (printf with"
+        }
+      },
+      {
+        "id": "evt_1c86f2bce001lR01s0J0IydeDn",
+        "created": 1794364091342,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": " format string"
+        }
+      },
+      {
+        "id": "evt_1c86f2c8b001OFN1r1M55QOC5s",
+        "created": 1794364091531,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": " LAB_ORDER, no args). So"
+        }
+      },
+      {
+        "id": "evt_1c86f2dae001By9U9A2eLZkO3Y",
+        "created": 1794364091822,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": " output is \""
+        }
+      },
+      {
+        "id": "evt_1c86f2ef9001PqrceluUFvYa9P",
+        "created": 1794364092153,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": "LAB_ORDER\" without newline.\n\nAlso there's a `lab_echo` tool that returns"
+        }
+      },
+      {
+        "id": "evt_1c86f2f850019CSJAsJoKmnUxq",
+        "created": 1794364092293,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": " a migration lab marker followed by supplied text. That"
+        }
+      },
+      {
+        "id": "evt_1c86f2fed001xeicp1XMsKxkcU",
+        "created": 1794364092397,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": " seems like a distractor. The instruction says use shell to run exactly that"
+        }
+      },
+      {
+        "id": "evt_1c86f2ff9001L8RBauV9NzZ10g",
+        "created": 1794364092409,
+        "type": "session.reasoning.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "delta": " command. Let me do that.\n\nLet me run it once."
+        }
+      },
+      {
+        "id": "evt_1c86f2ff9002JEirMuXvE2MQ5a",
+        "created": 1794364092409,
+        "type": "session.tool.input.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "id": "call_01a1c86f2e3571919d8aa217",
+          "name": "shell"
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 14,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f30760012IFN3As8clS58T",
+        "created": 1794364092534,
+        "type": "session.reasoning.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "ordinal": 0,
+          "text": "The user asked me to run exactly the command string \"printf LAB_ORDER\" once and report the output. The previous response was interrupted. Let me just run it.\n\nWait — there's a subtlety: the command \"printf LAB_ORDER\" without quotes. If run via shell, `printf LAB_ORDER` prints \"LAB_ORDER\" (printf with format string LAB_ORDER, no args). So output is \"LAB_ORDER\" without newline.\n\nAlso there's a `lab_echo` tool that returns a migration lab marker followed by supplied text. That seems like a distractor. The instruction says use shell to run exactly that command. Let me do that.\n\nLet me run it once.",
+          "native": {
+            "reasoningField": "reasoning_content"
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 15,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f3077001mTun1uo207330R",
+        "created": 1794364092535,
+        "type": "session.tool.input.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "id": "call_01a1c86f2e3571919d8aa217",
+          "text": "{\"command\":\"printf LAB_ORDER\"}"
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 16,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f3078001N3xJNpL3YG7irZ",
+        "created": 1794364092536,
+        "type": "session.tool.called",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "id": "call_01a1c86f2e3571919d8aa217",
+          "input": {
+            "command": "printf LAB_ORDER"
+          },
+          "executed": false
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 17,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f307a001ElGWDkoBVdo5Fz",
+        "created": 1794364092538,
+        "type": "session.step.streamed",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL"
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 18,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f3080002zVl7r8cfJkkiMV",
+        "created": 1794364092544,
+        "type": "session.tool.progress",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "id": "call_01a1c86f2e3571919d8aa217",
+          "metadata": {
+            "shellID": "sh_1c86f307e001bU7otfoK3hQCFM"
+          }
+        }
+      },
+      {
+        "id": "evt_1c86f30830017dBi4FWmd3m4Tl",
+        "created": 1794364092547,
+        "type": "session.tool.success",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "id": "call_01a1c86f2e3571919d8aa217",
+          "content": [
+            {
+              "type": "text",
+              "text": "LAB_ORDER"
+            }
+          ],
+          "metadata": {
+            "status": "completed",
+            "truncated": false,
+            "exit": 0
+          },
+          "executed": false
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 19,
+          "version": 2
+        }
+      },
+      {
+        "id": "evt_1c86f308a001IgxSNd54z9Y36m",
+        "created": 1794364092554,
+        "type": "session.step.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f1bd8001vpzBZ7DRs8iXNL",
+          "finish": "tool-calls",
+          "rawFinish": "tool_calls",
+          "tokens": {
+            "input": 5341,
+            "output": 30,
+            "reasoning": 134,
+            "cache": {
+              "read": 188,
+              "write": 0
+            }
+          },
+          "cost": 0,
+          "snapshot": "e3fe92e9694eb8dacea1063fe4a422cca589c329",
+          "files": []
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 20,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f308d001B1ZFqwwoto5nw2",
+        "created": 1794364092557,
+        "type": "session.usage.updated",
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "cost": 0,
+          "tokens": {
+            "input": 5341,
+            "output": 30,
+            "reasoning": 134,
+            "cache": {
+              "read": 188,
+              "write": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "evt_1c86f3629001vmsXu4DMdHNmGX",
+        "created": 1794364093993,
+        "type": "session.step.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "agent": "build",
+          "model": {
+            "id": "minimax-m3.1-flash-free",
+            "providerID": "opencode",
+            "variant": "default"
+          },
+          "assistantMessageID": "msg_1c86f3093001KFUL3zF5ayU8Q7",
+          "snapshot": "e3fe92e9694eb8dacea1063fe4a422cca589c329",
+          "started": 1794364092567
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 21,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f362b001XfYRYQrkH4cari",
+        "created": 1794364093995,
+        "type": "session.text.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f3093001KFUL3zF5ayU8Q7",
+          "ordinal": 0
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 22,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f3690001RBPX1JFk08F1Bc",
+        "created": 1794364094096,
+        "type": "session.text.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f3093001KFUL3zF5ayU8Q7",
+          "ordinal": 0,
+          "delta": "The command `printf LAB_ORDER` was run once. Output:\n\n```\nLAB_ORDER\n```\n\nNo trailing newline is emitted"
+        }
+      },
+      {
+        "id": "evt_1c86f36fe0010B45FUb3O55eE2",
+        "created": 1794364094206,
+        "type": "session.text.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f3093001KFUL3zF5ayU8Q7",
+          "ordinal": 0,
+          "delta": ","
+        }
+      },
+      {
+        "id": "evt_1c86f3772001VRRaajfzmxrgDJ",
+        "created": 1794364094322,
+        "type": "session.text.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f3093001KFUL3zF5ayU8Q7",
+          "ordinal": 0,
+          "delta": " since `printf` only adds a newline when the format string contains `\\n`."
+        }
+      },
+      {
+        "id": "evt_1c86f37e30013luWYjgajERLaj",
+        "created": 1794364094435,
+        "type": "session.text.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f3093001KFUL3zF5ayU8Q7",
+          "ordinal": 0,
+          "text": "The command `printf LAB_ORDER` was run once. Output:\n\n```\nLAB_ORDER\n```\n\nNo trailing newline is emitted, since `printf` only adds a newline when the format string contains `\\n`."
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 23,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f37e4001za4msI11HL1qhb",
+        "created": 1794364094436,
+        "type": "session.step.streamed",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f3093001KFUL3zF5ayU8Q7"
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 24,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f37ea0010gNNwLFgciVGGV",
+        "created": 1794364094442,
+        "type": "session.step.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "assistantMessageID": "msg_1c86f3093001KFUL3zF5ayU8Q7",
+          "finish": "stop",
+          "rawFinish": "stop",
+          "tokens": {
+            "input": 181,
+            "output": 42,
+            "reasoning": 0,
+            "cache": {
+              "read": 5529,
+              "write": 0
+            }
+          },
+          "cost": 0,
+          "snapshot": "e3fe92e9694eb8dacea1063fe4a422cca589c329",
+          "files": []
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 25,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f37ed001msXZpuG6d52Xu7",
+        "created": 1794364094445,
+        "type": "session.usage.updated",
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "cost": 0,
+          "tokens": {
+            "input": 5522,
+            "output": 72,
+            "reasoning": 134,
+            "cache": {
+              "read": 5717,
+              "write": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "evt_1c86f37ee001g7DoktJCfJd6vR",
+        "created": 1794364094446,
+        "type": "session.execution.succeeded",
+        "data": {
+          "sessionID": "ses_e3791e8afffefI74imdPjsT5Ma"
+        },
+        "durable": {
+          "aggregateID": "ses_e3791e8afffefI74imdPjsT5Ma",
+          "seq": 26,
+          "version": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "broad-last",
+    "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+    "permissions": [
+      {
+        "action": "shell",
+        "resource": "printf LAB_ORDER",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "*",
+        "effect": "ask"
+      }
+    ],
+    "events": [
+      {
+        "id": "evt_1c86f37f50012AQHa57RaT8Moi",
+        "created": 1794364094453,
+        "type": "session.created",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "slug": "misty-knight",
+          "version": "2.2.7",
+          "projectID": "global",
+          "location": {
+            "directory": "/tmp/opencode-lab/project-v2"
+          },
+          "subpath": "",
+          "title": "Rule order broad-last",
+          "permissions": [
+            {
+              "action": "shell",
+              "resource": "printf LAB_ORDER",
+              "effect": "allow"
+            },
+            {
+              "action": "shell",
+              "resource": "*",
+              "effect": "ask"
+            }
+          ],
+          "model": {
+            "id": "minimax-m3.1-flash-free",
+            "providerID": "opencode"
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 0,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f37f80024wOeJdZxLMpbnh",
+        "created": 1794364094456,
+        "type": "session.inbox.enqueued",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "inboxID": "msg_1c86f37f8001xyjiYoxf5tTcze",
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "item": {
+            "type": "user",
+            "payload": {
+              "text": "Use shell to run exactly the command string \"printf LAB_ORDER\" once. Report the output."
+            },
+            "delivery": "steer"
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 1,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f37f9001QmBXmHwRLirQ00",
+        "created": 1794364094457,
+        "type": "session.execution.started",
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg"
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 2,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f37fb001kCgZOkh8mHIHOj",
+        "created": 1794364094459,
+        "metadata": {
+          "instructions": {
+            "initial": true
+          }
+        },
+        "type": "session.instructions.updated",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "delta": {
+            "core/codemode": "b9321aa27fe3f9eb6662ad886008492dd401333a0049c044c54ac2323b9ead1e",
+            "core/skill-guidance": "8394362d28c82fa4d13c7a9f5568c05680f6687e07db8f426a0e3c92f3027dc9",
+            "core/date": "8fda1d364fef8b5fbcccb039ef94b1ebe3705b3b3a6d558d6d10f92e84ff9e33",
+            "core/environment": "91c540d7ea31450936ef9fac70e908211f6a6633ae7bd7be53449c467f63a099"
+          }
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 3,
+          "version": 2
+        }
+      },
+      {
+        "id": "evt_1c86f37fc0013VANLlTS7x1BEB",
+        "created": 1794364094460,
+        "type": "session.inbox.delivered",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "inboxID": "msg_1c86f37f8001xyjiYoxf5tTcze"
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 4,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f4027001Fcce3zEOa847r1",
+        "created": 1794364096551,
+        "type": "session.step.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "agent": "build",
+          "model": {
+            "id": "minimax-m3.1-flash-free",
+            "providerID": "opencode",
+            "variant": "default"
+          },
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+          "snapshot": "e3fe92e9694eb8dacea1063fe4a422cca589c329",
+          "started": 1794364094465
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 5,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f40290011nc3cqljgVCCjB",
+        "created": 1794364096553,
+        "type": "session.text.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+          "ordinal": 0
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 6,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f406c001MlzXuGQhgsloyK",
+        "created": 1794364096620,
+        "type": "session.text.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+          "ordinal": 0,
+          "delta": "I'll run that command."
+        }
+      },
+      {
+        "id": "evt_1c86f406c002q7QT6zeDjU8Pev",
+        "created": 1794364096620,
+        "type": "session.tool.input.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+          "id": "call_01a1c86f3ebb74f19c8c7d80",
+          "name": "shell"
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 7,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f40ba001PRlkdhp2y77dMG",
+        "created": 1794364096698,
+        "type": "session.tool.input.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+          "id": "call_01a1c86f3ebb74f19c8c7d80",
+          "text": "{\"command\":\"printf LAB_ORDER\"}"
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 8,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f40bb001KOePGmT8IAYu0L",
+        "created": 1794364096699,
+        "type": "session.tool.called",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+          "id": "call_01a1c86f3ebb74f19c8c7d80",
+          "input": {
+            "command": "printf LAB_ORDER"
+          },
+          "executed": false
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 9,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f40bc001hJY1QRQ8ehHJhf",
+        "created": 1794364096700,
+        "type": "session.text.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+          "ordinal": 0,
+          "text": "I'll run that command."
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 10,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f40bd001ZgMoGeQh6UFQPP",
+        "created": 1794364096701,
+        "type": "session.step.streamed",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq"
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 11,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f40be0020QsUi05FN2I3E3",
+        "created": 1794364096702,
+        "type": "permission.asked",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "id": "per_1c86f40be001VjRk8WPtnDH2P0",
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "action": "shell",
+          "resources": [
+            "printf LAB_ORDER"
+          ],
+          "save": [
+            "printf *"
+          ],
+          "source": {
+            "type": "tool",
+            "messageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+            "id": "call_01a1c86f3ebb74f19c8c7d80"
+          }
+        }
+      },
+      {
+        "id": "evt_1c86f40c0001LHgpBKCC2R4NQW",
+        "created": 1794364096704,
+        "type": "permission.replied",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "requestID": "per_1c86f40be001VjRk8WPtnDH2P0",
+          "reply": "once"
+        }
+      },
+      {
+        "id": "evt_1c86f40c2002q7SseaoaBaWDrl",
+        "created": 1794364096706,
+        "type": "session.tool.progress",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+          "id": "call_01a1c86f3ebb74f19c8c7d80",
+          "metadata": {
+            "shellID": "sh_1c86f40c000256levfPwMf1zx2"
+          }
+        }
+      },
+      {
+        "id": "evt_1c86f40c400177H8m3rTDr1vQw",
+        "created": 1794364096708,
+        "type": "session.tool.success",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+          "id": "call_01a1c86f3ebb74f19c8c7d80",
+          "content": [
+            {
+              "type": "text",
+              "text": "LAB_ORDER"
+            }
+          ],
+          "metadata": {
+            "status": "completed",
+            "truncated": false,
+            "exit": 0
+          },
+          "executed": false
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 12,
+          "version": 2
+        }
+      },
+      {
+        "id": "evt_1c86f40c9001N4n9ztI7hVFDLn",
+        "created": 1794364096713,
+        "type": "session.step.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f37ff001ePNLOFF6m3hWpq",
+          "finish": "tool-calls",
+          "rawFinish": "tool_calls",
+          "tokens": {
+            "input": 1,
+            "output": 34,
+            "reasoning": 0,
+            "cache": {
+              "read": 5506,
+              "write": 0
+            }
+          },
+          "cost": 0,
+          "snapshot": "e3fe92e9694eb8dacea1063fe4a422cca589c329",
+          "files": []
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 13,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f40cb001ZBUzpPL7vfD4yv",
+        "created": 1794364096715,
+        "type": "session.usage.updated",
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "cost": 0,
+          "tokens": {
+            "input": 1,
+            "output": 34,
+            "reasoning": 0,
+            "cache": {
+              "read": 5506,
+              "write": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "evt_1c86f4730001PofF7rIQs2YD5w",
+        "created": 1794364098352,
+        "type": "session.step.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "agent": "build",
+          "model": {
+            "id": "minimax-m3.1-flash-free",
+            "providerID": "opencode",
+            "variant": "default"
+          },
+          "assistantMessageID": "msg_1c86f40cf001w5VovwmDateRc5",
+          "snapshot": "e3fe92e9694eb8dacea1063fe4a422cca589c329",
+          "started": 1794364096721
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 14,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f47320013niX0QNxj21W3L",
+        "created": 1794364098354,
+        "type": "session.text.started",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f40cf001w5VovwmDateRc5",
+          "ordinal": 0
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 15,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f4797001wYWHdFmiftK14L",
+        "created": 1794364098455,
+        "type": "session.text.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f40cf001w5VovwmDateRc5",
+          "ordinal": 0,
+          "delta": "The output is:\n\n```\nLAB_ORDER\n"
+        }
+      },
+      {
+        "id": "evt_1c86f47fc0013bKXWvDEYPE878",
+        "created": 1794364098556,
+        "type": "session.text.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f40cf001w5VovwmDateRc5",
+          "ordinal": 0,
+          "delta": "```\n\nNo trailing newline was added, since `printf` (without `\\n`) emits the"
+        }
+      },
+      {
+        "id": "evt_1c86f484e001J6lcGPXZGxKO8c",
+        "created": 1794364098639,
+        "type": "session.text.delta",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f40cf001w5VovwmDateRc5",
+          "ordinal": 0,
+          "delta": " string exactly as given."
+        }
+      },
+      {
+        "id": "evt_1c86f484f001dIv8MVcEdSVzKM",
+        "created": 1794364098639,
+        "type": "session.text.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f40cf001w5VovwmDateRc5",
+          "ordinal": 0,
+          "text": "The output is:\n\n```\nLAB_ORDER\n```\n\nNo trailing newline was added, since `printf` (without `\\n`) emits the string exactly as given."
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 16,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f4851001dnIOy77WkEFsCC",
+        "created": 1794364098641,
+        "type": "session.step.streamed",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f40cf001w5VovwmDateRc5"
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 17,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f48570016ytkfEjafx7Dz0",
+        "created": 1794364098647,
+        "type": "session.step.ended",
+        "location": {
+          "directory": "/tmp/opencode-lab/project-v2"
+        },
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "assistantMessageID": "msg_1c86f40cf001w5VovwmDateRc5",
+          "finish": "stop",
+          "rawFinish": "stop",
+          "tokens": {
+            "input": 51,
+            "output": 33,
+            "reasoning": 0,
+            "cache": {
+              "read": 5507,
+              "write": 0
+            }
+          },
+          "cost": 0,
+          "snapshot": "e3fe92e9694eb8dacea1063fe4a422cca589c329",
+          "files": []
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 18,
+          "version": 1
+        }
+      },
+      {
+        "id": "evt_1c86f4859001W3PTQ9MHJdmEuG",
+        "created": 1794364098649,
+        "type": "session.usage.updated",
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "cost": 0,
+          "tokens": {
+            "input": 52,
+            "output": 67,
+            "reasoning": 0,
+            "cache": {
+              "read": 11013,
+              "write": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "evt_1c86f485a0013tEFfG7zT1Qztc",
+        "created": 1794364098650,
+        "type": "session.execution.succeeded",
+        "data": {
+          "sessionID": "ses_e3790c80bffeJSnANKG5kkEnmg"
+        },
+        "durable": {
+          "aggregateID": "ses_e3790c80bffeJSnANKG5kkEnmg",
+          "seq": 19,
+          "version": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1c898-a579-7401-8080-6ffdf348ecd6"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Model metadata for `minimax-m3.1-flash-free` not found. Defaulting to fallback metadata; this can degrade performance and cause issues."}}
+{"type":"turn.started"}
+{"type":"error","message":"Reconnecting... 1/5 (exceeded retry limit, last status: 429 Too Many Requests, request id: a58a1f195f9ffd1c-SIN)"}

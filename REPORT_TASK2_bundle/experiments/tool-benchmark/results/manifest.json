@@ -1,0 +1,20 @@
+{
+  "python": "3.12.3",
+  "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+  "model": "gpt-6.1-sol",
+  "reasoning": "medium",
+  "versions": {
+    "opencode": "2.2.7",
+    "pi": "1.5.0",
+    "codex": "0.166.0-alpha.6",
+    "bun": "1.4.4"
+  },
+  "baseline_commits": [
+    "2df9832b24031a7a2fe6ee159a66461c1eaecebc"
+  ],
+  "task_prompt_sha256": {
+    "T1": "03b6bd98b115788ed3c37fb1e6942d80a2317f95c8257cba0de3edf2bd48c9bb",
+    "T2": "ab6923c92e4b1e5c53d78cef634d31e33915af7e47dceeb8f1a0a0e697d542d4",
+    "T3": "17931b2f4a9f6db4737e3acb92a5e7a9c6fdc62f6f5b543acce6055a18af8ab3"
+  }
+}

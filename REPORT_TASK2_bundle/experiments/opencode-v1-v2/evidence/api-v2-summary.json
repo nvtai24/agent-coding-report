@@ -1,0 +1,87 @@
+{
+  "version": "2.2.7",
+  "sessionID": "ses_e3799f1e9fferWMk3uJCm5BVcp",
+  "admitted": {
+    "id": "msg_1c8660e42001nk8QrPc2uLR45l",
+    "sessionID": "ses_e3799f1e9fferWMk3uJCm5BVcp",
+    "time": {
+      "created": 1794363494318
+    },
+    "type": "user",
+    "payload": {
+      "text": "Reply exactly MIGRATION_API_OK. Do not use tools."
+    },
+    "delivery": "steer"
+  },
+  "terminal": {
+    "id": "evt_1c8661871001GYViCET3daetHs",
+    "created": 1794363496561,
+    "type": "session.execution.succeeded",
+    "data": {
+      "sessionID": "ses_e3799f1e9fferWMk3uJCm5BVcp"
+    },
+    "durable": {
+      "aggregateID": "ses_e3799f1e9fferWMk3uJCm5BVcp",
+      "seq": 10,
+      "version": 1
+    }
+  },
+  "elapsedMs": 2637,
+  "context": [
+    {
+      "id": "msg_1c8660e42001nk8QrPc2uLR45l",
+      "time": {
+        "created": 1794363494330
+      },
+      "text": "Reply exactly MIGRATION_API_OK. Do not use tools.",
+      "type": "user"
+    },
+    {
+      "id": "msg_1c8660fc0001B3d6n9mB6663QA",
+      "time": {
+        "created": 1794363494341,
+        "streamed": 1794363496550,
+        "completed": 1794363496558
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "minimax-m3.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "MIGRATION_API_OK"
+        }
+      ],
+      "snapshot": {
+        "start": "747a7f46b9ed8600bb7b57937384abaed0e8ff9b",
+        "end": "747a7f46b9ed8600bb7b57937384abaed0e8ff9b",
+        "files": []
+      },
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 3647,
+        "output": 7,
+        "reasoning": 0,
+        "cache": {
+          "read": 1792,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1c8661871001GYViCET3daetHs",
+      "time": {
+        "created": 1794363496561
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ],
+  "eventCount": 13
+}

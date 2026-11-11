@@ -1,0 +1,428 @@
+[
+  {
+    "name": "background-subagent",
+    "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+    "prompt": "Call task with subagent_type=general, background=true. Give it this task: run bash command \"sleep 5; printf CHILD_DONE\", then reply CHILD_DONE. After task returns running immediately reply PARENT_FREE. Do not poll.",
+    "result": {
+      "info": {
+        "parentID": "msg_1c875526b001fvoPscKob5IZWr",
+        "role": "assistant",
+        "mode": "build",
+        "agent": "build",
+        "path": {
+          "cwd": "/tmp/opencode-lab/project-v1",
+          "root": "/tmp/opencode-lab/project-v1"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 8628,
+          "input": 431,
+          "output": 5,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 8192
+          }
+        },
+        "modelID": "minimax-m3.1-flash-free",
+        "providerID": "opencode",
+        "time": {
+          "created": 1794364498335,
+          "completed": 1794364503589
+        },
+        "finish": "stop",
+        "id": "msg_1c875619f001jiUOGmArPhl9jn",
+        "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL"
+      },
+      "parts": [
+        {
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-start",
+          "id": "prt_1c87575730017MExwUwA8rydNA",
+          "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+          "messageID": "msg_1c875619f001jiUOGmArPhl9jn"
+        },
+        {
+          "type": "text",
+          "text": "PARENT_FREE",
+          "time": {
+            "start": 1794364503566,
+            "end": 1794364503568
+          },
+          "id": "prt_1c875760e001laN7oLTDNH2dBT",
+          "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+          "messageID": "msg_1c875619f001jiUOGmArPhl9jn"
+        },
+        {
+          "reason": "stop",
+          "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+          "type": "step-finish",
+          "tokens": {
+            "total": 8628,
+            "input": 431,
+            "output": 5,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 8192
+            }
+          },
+          "cost": 0,
+          "id": "prt_1c875761a001zQIbmlAddXaI02",
+          "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+          "messageID": "msg_1c875619f001jiUOGmArPhl9jn"
+        }
+      ]
+    },
+    "messages": [
+      {
+        "info": {
+          "id": "msg_1c875526b001fvoPscKob5IZWr",
+          "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+          "role": "user",
+          "time": {
+            "created": 1794364494443
+          },
+          "summary": {
+            "diffs": []
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "opencode",
+            "modelID": "minimax-m3.1-flash-free"
+          }
+        },
+        "parts": [
+          {
+            "id": "prt_1c8755271001bcQEk2mfgzRuj3",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c875526b001fvoPscKob5IZWr",
+            "type": "text",
+            "text": "Call task with subagent_type=general, background=true. Give it this task: run bash command \"sleep 5; printf CHILD_DONE\", then reply CHILD_DONE. After task returns running immediately reply PARENT_FREE. Do not poll."
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c87553f2001v9uWHicBwgz5sf",
+          "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+          "role": "assistant",
+          "time": {
+            "created": 1794364494834,
+            "completed": 1794364498331
+          },
+          "parentID": "msg_1c875526b001fvoPscKob5IZWr",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8494,
+            "input": 2516,
+            "output": 90,
+            "reasoning": 0,
+            "cache": {
+              "read": 5888,
+              "write": 0
+            }
+          },
+          "finish": "tool-calls"
+        },
+        "parts": [
+          {
+            "id": "prt_1c8755f7d00120VafObh9i3oJD",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c87553f2001v9uWHicBwgz5sf",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c8755f7f001uBjwRd8h2E7S34",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c87553f2001v9uWHicBwgz5sf",
+            "type": "text",
+            "text": "I'll launch the background task now.",
+            "time": {
+              "start": 1794364497791,
+              "end": 1794364498302
+            }
+          },
+          {
+            "id": "prt_1c8756167001HUnUK6iJ4AsdYc",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c87553f2001v9uWHicBwgz5sf",
+            "type": "tool",
+            "callID": "call_e3d61ecc5c7b46fea19e1166",
+            "tool": "task",
+            "state": {
+              "status": "completed",
+              "input": {
+                "description": "Run sleep and echo marker",
+                "prompt": "Run the bash command \"sleep 5; printf CHILD_DONE\", then reply with exactly: CHILD_DONE",
+                "subagent_type": "general",
+                "background": true
+              },
+              "output": "<task id=\"ses_e378a9e92ffeFWsgvChHb8mEbe\" state=\"running\">\n<summary>Background task started</summary>\n<task_result>\nThe task is working in the background. You will be notified automatically when it finishes.\nDO NOT sleep, poll for progress, ask the task for status, or duplicate this task's work — avoid working with the same files or topics it is using.\nWork on non-overlapping tasks, or briefly tell the user what you launched and end your response.\n</task_result>\n</task>",
+              "title": "Run sleep and echo marker",
+              "metadata": {
+                "parentSessionId": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+                "sessionId": "ses_e378a9e92ffeFWsgvChHb8mEbe",
+                "model": {
+                  "modelID": "minimax-m3.1-flash-free",
+                  "providerID": "opencode"
+                },
+                "background": true,
+                "jobId": "ses_e378a9e92ffeFWsgvChHb8mEbe",
+                "truncated": false
+              },
+              "time": {
+                "start": 1794364498288,
+                "end": 1794364498301
+              }
+            }
+          },
+          {
+            "id": "prt_1c875618d0013lUC9uZ30ogD3r",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c87553f2001v9uWHicBwgz5sf",
+            "type": "step-finish",
+            "reason": "tool-calls",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8494,
+              "input": 2516,
+              "output": 90,
+              "reasoning": 0,
+              "cache": {
+                "read": 5888,
+                "write": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c875619f001jiUOGmArPhl9jn",
+          "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+          "role": "assistant",
+          "time": {
+            "created": 1794364498335,
+            "completed": 1794364503589
+          },
+          "parentID": "msg_1c875526b001fvoPscKob5IZWr",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8628,
+            "input": 431,
+            "output": 5,
+            "reasoning": 0,
+            "cache": {
+              "read": 8192,
+              "write": 0
+            }
+          },
+          "finish": "stop"
+        },
+        "parts": [
+          {
+            "id": "prt_1c87575730017MExwUwA8rydNA",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c875619f001jiUOGmArPhl9jn",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c875760e001laN7oLTDNH2dBT",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c875619f001jiUOGmArPhl9jn",
+            "type": "text",
+            "text": "PARENT_FREE",
+            "time": {
+              "start": 1794364503566,
+              "end": 1794364503568
+            }
+          },
+          {
+            "id": "prt_1c875761a001zQIbmlAddXaI02",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c875619f001jiUOGmArPhl9jn",
+            "type": "step-finish",
+            "reason": "stop",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8628,
+              "input": 431,
+              "output": 5,
+              "reasoning": 0,
+              "cache": {
+                "read": 8192,
+                "write": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c8758ef6001AuF6CLbIV0H3GB",
+          "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+          "role": "user",
+          "time": {
+            "created": 1794364509942
+          },
+          "summary": {
+            "diffs": []
+          },
+          "agent": "build",
+          "model": {
+            "providerID": "opencode",
+            "modelID": "minimax-m3.1-flash-free"
+          }
+        },
+        "parts": [
+          {
+            "id": "prt_1c8758ef6002AgUVHBkZ7dAvDP",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c8758ef6001AuF6CLbIV0H3GB",
+            "type": "text",
+            "text": "<task id=\"ses_e378a9e92ffeFWsgvChHb8mEbe\" state=\"completed\">\n<summary>Background task completed: Run sleep and echo marker</summary>\n<task_result>\nCHILD_DONE\n</task_result>\n</task>",
+            "synthetic": true
+          }
+        ]
+      },
+      {
+        "info": {
+          "id": "msg_1c8758efe001Zv6WWyllouzDpL",
+          "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+          "role": "assistant",
+          "time": {
+            "created": 1794364509950,
+            "completed": 1794364512674
+          },
+          "parentID": "msg_1c8758ef6001AuF6CLbIV0H3GB",
+          "modelID": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "mode": "build",
+          "agent": "build",
+          "path": {
+            "cwd": "/tmp/opencode-lab/project-v1",
+            "root": "/tmp/opencode-lab/project-v1"
+          },
+          "cost": 0,
+          "tokens": {
+            "total": 8707,
+            "input": 246,
+            "output": 13,
+            "reasoning": 0,
+            "cache": {
+              "read": 8448,
+              "write": 0
+            }
+          },
+          "finish": "stop"
+        },
+        "parts": [
+          {
+            "id": "prt_1c87598f9001e600oLZVGxLgCk",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c8758efe001Zv6WWyllouzDpL",
+            "type": "step-start",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730"
+          },
+          {
+            "id": "prt_1c87598fc001u5vo7p1rubnsxF",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c8758efe001Zv6WWyllouzDpL",
+            "type": "text",
+            "text": "Child task completed and returned `CHILD_DONE`.",
+            "time": {
+              "start": 1794364512508,
+              "end": 1794364512651
+            }
+          },
+          {
+            "id": "prt_1c8759997001d5TNZMs1gw6dZE",
+            "sessionID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+            "messageID": "msg_1c8758efe001Zv6WWyllouzDpL",
+            "type": "step-finish",
+            "reason": "stop",
+            "snapshot": "8af7f892acbf4dcb69b757ce4c13ad7389355730",
+            "cost": 0,
+            "tokens": {
+              "total": 8707,
+              "input": 246,
+              "output": 13,
+              "reasoning": 0,
+              "cache": {
+                "read": 8448,
+                "write": 0
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "children": [
+      {
+        "id": "ses_e378a9e92ffeFWsgvChHb8mEbe",
+        "slug": "brave-moon",
+        "projectID": "global",
+        "directory": "/tmp/opencode-lab/project-v1",
+        "path": "",
+        "parentID": "ses_e378aada9ffeLkD6rvWAkhZ6qL",
+        "summary": {
+          "additions": 0,
+          "deletions": 0,
+          "files": 0
+        },
+        "cost": 0,
+        "tokens": {
+          "input": 6329,
+          "output": 46,
+          "reasoning": 0,
+          "cache": {
+            "read": 6526,
+            "write": 0
+          }
+        },
+        "title": "Run sleep and echo marker (@general subagent)",
+        "agent": "general",
+        "model": {
+          "id": "minimax-m3.1-flash-free",
+          "providerID": "opencode",
+          "variant": "default"
+        },
+        "version": "1.19.5",
+        "time": {
+          "created": 1794364498285,
+          "updated": 1794364509947
+        },
+        "permission": [
+          {
+            "permission": "task",
+            "pattern": "*",
+            "action": "deny"
+          }
+        ]
+      }
+    ],
+    "elapsedMs": 24270,
+    "events": 72
+  }
+]

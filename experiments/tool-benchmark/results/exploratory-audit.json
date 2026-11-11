@@ -1,0 +1,152 @@
+{
+  "scope": "Post-run exploratory probe; excluded from primary completion rates.",
+  "rows": [
+    {
+      "run_id": "codex-T2-r1",
+      "probe": "blank line before header",
+      "behavior": {
+        "accepted": true,
+        "result": [
+          {
+            "order_id": "A",
+            "lines": [
+              {
+                "sku": "X",
+                "quantity": 1,
+                "unit_price_cents": 10
+              }
+            ]
+          }
+        ]
+      },
+      "legacy_cli": {
+        "totals": true,
+        "summary": true
+      }
+    },
+    {
+      "run_id": "codex-T2-r2",
+      "probe": "blank line before header",
+      "behavior": {
+        "accepted": true,
+        "result": [
+          {
+            "order_id": "A",
+            "lines": [
+              {
+                "sku": "X",
+                "quantity": 1,
+                "unit_price_cents": 10
+              }
+            ]
+          }
+        ]
+      },
+      "legacy_cli": {
+        "totals": true,
+        "summary": true
+      }
+    },
+    {
+      "run_id": "codex-T2-r3",
+      "probe": "blank line before header",
+      "behavior": {
+        "accepted": false,
+        "errorType": "ValueError",
+        "message": "CSV headers must be exactly: order_id, quantity, sku, unit_price_cents"
+      },
+      "legacy_cli": {
+        "totals": true,
+        "summary": true
+      }
+    },
+    {
+      "run_id": "opencode-T2-r1",
+      "probe": "blank line before header",
+      "behavior": {
+        "accepted": false,
+        "errorType": "ValueError",
+        "message": "CSV headers must be exactly: order_id, sku, quantity, unit_price_cents"
+      },
+      "legacy_cli": {
+        "totals": true,
+        "summary": true
+      }
+    },
+    {
+      "run_id": "opencode-T2-r2",
+      "probe": "blank line before header",
+      "behavior": {
+        "accepted": false,
+        "errorType": "ValueError",
+        "message": "Expected exactly order_id, sku, quantity, unit_price_cents"
+      },
+      "legacy_cli": {
+        "totals": true,
+        "summary": true
+      }
+    },
+    {
+      "run_id": "opencode-T2-r3",
+      "probe": "blank line before header",
+      "behavior": {
+        "accepted": false,
+        "errorType": "ValueError",
+        "message": "CSV headers must be exactly: order_id, quantity, sku, unit_price_cents"
+      },
+      "legacy_cli": {
+        "totals": true,
+        "summary": true
+      }
+    },
+    {
+      "run_id": "pi-T2-r1",
+      "probe": "blank line before header",
+      "behavior": {
+        "accepted": false,
+        "errorType": "ValueError",
+        "message": "CSV headers must be exactly: order_id, quantity, sku, unit_price_cents"
+      },
+      "legacy_cli": {
+        "totals": true,
+        "summary": true
+      }
+    },
+    {
+      "run_id": "pi-T2-r2",
+      "probe": "blank line before header",
+      "behavior": {
+        "accepted": true,
+        "result": [
+          {
+            "order_id": "A",
+            "lines": [
+              {
+                "sku": "X",
+                "quantity": 1,
+                "unit_price_cents": 10
+              }
+            ]
+          }
+        ]
+      },
+      "legacy_cli": {
+        "totals": true,
+        "summary": true
+      }
+    },
+    {
+      "run_id": "pi-T2-r3",
+      "probe": "blank line before header",
+      "behavior": {
+        "accepted": false,
+        "errorType": "ValueError",
+        "message": "Expected exactly order_id, sku, quantity, unit_price_cents"
+      },
+      "legacy_cli": {
+        "totals": true,
+        "summary": true
+      }
+    }
+  ]
+}

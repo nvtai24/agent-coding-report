@@ -1,0 +1,10 @@
+{
+  "name": "opencode-migration-lab",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@opencode/client": "2.2.7",
+    "@opencode/plugin": "2.2.7",
+    "@opencode-ai/plugin": "1.19.5"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "run_id": "opencode-T3-r3",
+  "tool": "opencode",
+  "task": "T3",
+  "repeat": 3,
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "started_at": "2026-11-11T03:51:23.917108+00:00",
+  "elapsed_seconds": 65.474,
+  "exit_code": 0,
+  "timed_out": false,
+  "workspace": "/tmp/coding-benchmark/workspaces/opencode-T3-r3",
+  "baseline_commit": "2df9832b24031a7a2fe6ee159a66461c1eaecebc",
+  "acceptance_passed": 8,
+  "acceptance_total": 8,
+  "existing_tests_pass": true,
+  "original_tests_unchanged": true,
+  "terminal_success": true,
+  "success": true,
+  "changed_files": [
+    "cartkit/reports.py",
+    "tests/test_reports.py"
+  ],
+  "usage": {
+    "input_total": 35326,
+    "input_uncached": 6398,
+    "input_cached": 28928,
+    "input_cache_write": 0,
+    "output_total": 1864,
+    "reasoning": 28,
+    "model_calls": 6,
+    "tool_calls": 9,
+    "total_tokens": 37190,
+    "usage_available": true
+  },
+  "command": [
+    "/tmp/opencode-lab/runtime/bun-linux-x64/bun",
+    "/home/tts/Desktop/vsf/agent-coding-report/experiments/tool-benchmark/scripts/run-opencode.ts",
+    "/tmp/coding-benchmark/workspaces/opencode-T3-r3",
+    "/home/tts/Desktop/vsf/agent-coding-report/experiments/tool-benchmark/results/opencode-T3-r3/prompt.txt",
+    "/home/tts/Desktop/vsf/agent-coding-report/experiments/tool-benchmark/results/opencode-T3-r3/agent"
+  ]
+}

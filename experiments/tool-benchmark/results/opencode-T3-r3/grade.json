@@ -1,0 +1,10 @@
+{
+  "task": "T3",
+  "testsRun": 8,
+  "failures": 0,
+  "errors": 0,
+  "passed": 8,
+  "existingTestsUnchanged": true,
+  "success": true,
+  "output": "test_customer_key_order (acceptance.Acceptance.test_customer_key_order) ... ok\ntest_empty (acceptance.Acceptance.test_empty) ... ok\ntest_generator_summary (acceptance.Acceptance.test_generator_summary) ... ok\ntest_list_compatibility (acceptance.Acceptance.test_list_compatibility) ... ok\ntest_no_mutation (acceptance.Acceptance.test_no_mutation) ... ok\ntest_one_iteration_customers (acceptance.Acceptance.test_one_iteration_customers) ... ok\ntest_one_iteration_summary (acceptance.Acceptance.test_one_iteration_summary) ... ok\ntest_zero_paid_customer_preserved (acceptance.Acceptance.test_zero_paid_customer_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.000s\n\nOK\n"
+}

@@ -1,0 +1,17 @@
+WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/coding-benchmark/codex-home"))
+Reading additional input from stdin...
+2026-11-11T03:13:29.467155Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:29.473418Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:29.474637Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:29.475151Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:29.478481Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:29.480799Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:29.481380Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:29.481970Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:29.484213Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:29.485411Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:29.487423Z  WARN codex_models_manager::model_info: Unknown model minimax-m3.1-flash-free is used. This will use fallback model metadata.
+2026-11-11T03:13:30.626117Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured?platform=codex failed with status 401 Unauthorized: {"detail":"Unauthorized"}
+2026-11-11T03:13:31.926743Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 74788.999901975s)... turn_id=01a1c898-a588-7f73-96bd-cfca9f85030b retries=1 max_retries=5 sampling_error=exceeded retry limit, last status: 429 Too Many Requests, request id: a58a1f195f9ffd1c-SIN
+2026-11-11T03:13:34.167849Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///tmp/coding-benchmark/codex-home/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+2026-11-11T03:13:34.169800Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///tmp/coding-benchmark/codex-home/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json

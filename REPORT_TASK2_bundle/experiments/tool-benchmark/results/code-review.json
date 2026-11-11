@@ -1,0 +1,31 @@
+{
+  "T3_shared_helper_names": {
+    "codex-T3-r1": [
+      "_aggregate_orders"
+    ],
+    "codex-T3-r2": [
+      "_aggregate_orders"
+    ],
+    "codex-T3-r3": [
+      "_aggregate_orders"
+    ],
+    "opencode-T3-r1": [
+      "_aggregate_orders"
+    ],
+    "opencode-T3-r2": [
+      "_aggregate_orders"
+    ],
+    "opencode-T3-r3": [
+      "_aggregate_orders"
+    ],
+    "pi-T3-r1": [
+      "_aggregate_orders"
+    ],
+    "pi-T3-r2": [
+      "_aggregate_orders"
+    ],
+    "pi-T3-r3": [
+      "_aggregate_orders"
+    ]
+  }
+}

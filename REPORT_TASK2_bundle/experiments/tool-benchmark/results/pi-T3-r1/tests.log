@@ -1,0 +1,12 @@
+test_default_quantity (test_existing.ExistingTests.test_default_quantity) ... ok
+test_invalid_discount (test_existing.ExistingTests.test_invalid_discount) ... ok
+test_list_report (test_existing.ExistingTests.test_list_report) ... ok
+test_regular_total (test_existing.ExistingTests.test_regular_total) ... ok
+test_empty_inputs (test_reports.ReportTests.test_empty_inputs) ... ok
+test_mixed_statuses_and_zero_paid_orders (test_reports.ReportTests.test_mixed_statuses_and_zero_paid_orders) ... ok
+test_no_paid_orders (test_reports.ReportTests.test_no_paid_orders) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.000s
+
+OK

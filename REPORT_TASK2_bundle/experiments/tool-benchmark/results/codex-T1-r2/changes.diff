@@ -1,0 +1,91 @@
+diff --git a/cartkit/money.py b/cartkit/money.py
+index 6f9ae8f..f0931f5 100644
+--- a/cartkit/money.py
++++ b/cartkit/money.py
+@@ -8,7 +8,7 @@ def calculate_totals(lines, discount_percent=0, shipping_cents=0):
+         raise ValueError('shipping_cents must be a nonnegative integer')
+     subtotal = 0
+     for line in lines:
+-        quantity = line.get('quantity') or 1
++        quantity = line.get('quantity', 1)
+         price = line['unit_price_cents']
+         if type(quantity) is not int or quantity < 0:
+             raise ValueError('quantity must be a nonnegative integer')
+diff --git a/tests/test_money.py b/tests/test_money.py
+new file mode 100644
+index 0000000..c049c06
+--- /dev/null
++++ b/tests/test_money.py
+@@ -0,0 +1,72 @@
++import copy
++import unittest
++
++from cartkit.money import calculate_totals
++
++
++class CalculateTotalsTests(unittest.TestCase):
++    def test_zero_quantity_has_no_subtotal_or_shipping(self):
++        self.assertEqual(
++            calculate_totals(
++                [{'unit_price_cents': 200, 'quantity': 0}], 50, 25
++            ),
++            {
++                'subtotal_cents': 0,
++                'discount_cents': 0,
++                'shipping_cents': 0,
++                'total_cents': 0,
++            },
++        )
++
++    def test_missing_quantity_defaults_to_one_in_mixed_cart(self):
++        self.assertEqual(
++            calculate_totals([
++                {'unit_price_cents': 200, 'quantity': 0},
++                {'unit_price_cents': 101},
++                {'unit_price_cents': 50, 'quantity': 2},
++            ])['subtotal_cents'],
++            201,
++        )
++
++    def test_invalid_quantities_raise_value_error(self):
++        for quantity in (None, False, True, -1, 0.5, 1.0):
++            with self.subTest(quantity=quantity):
++                with self.assertRaises(ValueError):
++                    calculate_totals([
++                        {'unit_price_cents': 100, 'quantity': quantity}
++                    ])
++
++    def test_discount_rounds_half_up_in_integer_cents(self):
++        for price, discount in ((4, 0), (5, 1), (6, 1)):
++            with self.subTest(price=price):
++                totals = calculate_totals([{'unit_price_cents': price}], 10)
++                self.assertEqual(totals['discount_cents'], discount)
++                self.assertEqual(totals['total_cents'], price - discount)
++
++    def test_shipping_uses_original_subtotal_with_full_discount(self):
++        self.assertEqual(
++            calculate_totals([{'unit_price_cents': 100}], 100, 25),
++            {
++                'subtotal_cents': 100,
++                'discount_cents': 100,
++                'shipping_cents': 25,
++                'total_cents': 25,
++            },
++        )
++
++    def test_empty_cart_has_no_shipping(self):
++        self.assertEqual(calculate_totals([], shipping_cents=25)['shipping_cents'], 0)
++
++    def test_input_lines_are_unchanged(self):
++        lines = [
++            {'unit_price_cents': 100},
++            {'unit_price_cents': 200, 'quantity': 0},
++            {'unit_price_cents': 50, 'quantity': 2},
++        ]
++        original = copy.deepcopy(lines)
++        calculate_totals(lines, 10, 25)
++        self.assertEqual(lines, original)
++
++
++if __name__ == '__main__':
++    unittest.main()

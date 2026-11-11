@@ -1,0 +1,10 @@
+{
+  "task": "T2",
+  "testsRun": 12,
+  "failures": 0,
+  "errors": 0,
+  "passed": 12,
+  "existingTestsUnchanged": true,
+  "success": true,
+  "output": "test_ascii_digits_only (acceptance.Acceptance.test_ascii_digits_only) ... ok\ntest_blank_identifiers (acceptance.Acceptance.test_blank_identifiers) ... ok\ntest_blank_rows_ignored (acceptance.Acceptance.test_blank_rows_ignored) ... ok\ntest_cli_json (acceptance.Acceptance.test_cli_json) ... ok\ntest_empty_valid_input (acceptance.Acceptance.test_empty_valid_input) ... ok\ntest_grouping_order_and_duplicate_sku (acceptance.Acceptance.test_grouping_order_and_duplicate_sku) ... ok\ntest_header_order_and_trimming (acceptance.Acceptance.test_header_order_and_trimming) ... ok\ntest_invalid_headers (acceptance.Acceptance.test_invalid_headers) ... ok\ntest_invalid_numeric_values (acceptance.Acceptance.test_invalid_numeric_values) ... ok\ntest_missing_and_extra_cells (acceptance.Acceptance.test_missing_and_extra_cells) ... ok\ntest_quoted_csv (acceptance.Acceptance.test_quoted_csv) ... ok\ntest_zero_and_leading_zeros (acceptance.Acceptance.test_zero_and_leading_zeros) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.026s\n\nOK\n"
+}

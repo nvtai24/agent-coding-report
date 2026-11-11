@@ -1,0 +1,24 @@
+{
+  "background-shell": {
+    "callAt": 1794363621916,
+    "toolReturnAfterMs": 9,
+    "firstExecutionEndAfterMs": 1379,
+    "completionExecutionEndAfterMs": 8877
+  },
+  "background-subagent": {
+    "callAt": 1794363632679,
+    "toolReturnAfterMs": 7,
+    "firstExecutionEndAfterMs": 1757,
+    "completionExecutionEndAfterMs": 10404
+  },
+  "v1BackgroundSubagent": {
+    "toolReturnMs": 13,
+    "input": {
+      "description": "Run sleep and echo marker",
+      "prompt": "Run the bash command \"sleep 5; printf CHILD_DONE\", then reply with exactly: CHILD_DONE",
+      "subagent_type": "general",
+      "background": true
+    },
+    "background": true
+  }
+}

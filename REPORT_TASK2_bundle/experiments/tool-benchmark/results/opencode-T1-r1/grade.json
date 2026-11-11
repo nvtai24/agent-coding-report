@@ -1,0 +1,10 @@
+{
+  "task": "T1",
+  "testsRun": 9,
+  "failures": 0,
+  "errors": 0,
+  "passed": 9,
+  "existingTestsUnchanged": true,
+  "success": true,
+  "output": "test_false_rejected (acceptance.Acceptance.test_false_rejected) ... ok\ntest_missing_defaults_to_one (acceptance.Acceptance.test_missing_defaults_to_one) ... ok\ntest_mixed_quantities (acceptance.Acceptance.test_mixed_quantities) ... ok\ntest_negative_and_fraction_rejected (acceptance.Acceptance.test_negative_and_fraction_rejected) ... ok\ntest_no_mutation_and_generator (acceptance.Acceptance.test_no_mutation_and_generator) ... ok\ntest_null_rejected (acceptance.Acceptance.test_null_rejected) ... ok\ntest_rounding_half_up (acceptance.Acceptance.test_rounding_half_up) ... ok\ntest_zero_avoids_shipping (acceptance.Acceptance.test_zero_avoids_shipping) ... ok\ntest_zero_quantity (acceptance.Acceptance.test_zero_quantity) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.000s\n\nOK\n"
+}

@@ -1,0 +1,23 @@
+{
+  "model": "opencode/minimax-m3.1-flash-free",
+  "plugins": [
+    "/home/tts/Desktop/vsf/agent-coding-report/experiments/opencode-v1-v2/plugins/v2"
+  ],
+  "permissions": [
+    {
+      "action": "shell",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "printf LAB_ASK",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "printf LAB_DENY",
+      "effect": "deny"
+    }
+  ]
+}

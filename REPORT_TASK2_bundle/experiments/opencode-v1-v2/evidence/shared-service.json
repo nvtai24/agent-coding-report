@@ -1,0 +1,53 @@
+{
+  "before": {
+    "version": "2.2.7",
+    "pid": 185326,
+    "hostname": "VSF-PF640FVG-L",
+    "urls": [
+      "http://127.0.0.1:14333"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "after": {
+    "version": "2.2.7",
+    "pid": 185326,
+    "hostname": "VSF-PF640FVG-L",
+    "urls": [
+      "http://127.0.0.1:14333"
+    ],
+    "paths": {
+      "tmp": "/tmp/opencode"
+    },
+    "capabilities": {
+      "persistentPty": true
+    }
+  },
+  "sessionFromA": "ses_e37837b7bffe1PW2WU00aQIe2P",
+  "sessionFromB": "ses_e37837b7bffe1PW2WU00aQIe2P",
+  "tui": {
+    "exitCode": 0,
+    "bytes": 18413,
+    "connectionError": false,
+    "expectedTitle": "Shared lab session",
+    "titlePrefixVisible": true
+  },
+  "web": {
+    "status": 200,
+    "contentType": "text/html",
+    "preview": "<!doctype html>\n<html lang=\"en\" style=\"background-color: var(--v2-background-bg-deep, #fafafa)\">\n  <head>\n    <meta char"
+  },
+  "registration": {
+    "id": "fb73a52c-9c69-4c35-a168-01c3fb16ed0c",
+    "version": "2.2.7",
+    "url": "http://127.0.0.1:14333",
+    "pid": 185326
+  },
+  "samePID": true,
+  "sameSession": true,
+  "stopped": true
+}
