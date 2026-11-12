@@ -1,5 +1,9 @@
 # Báo cáo tìm hiểu AI Coding Agent và OpenCode
 
+**Tên report:** Báo cáo tìm hiểu AI Coding Agent và OpenCode
+
+**Người thực hiện:** Nguyễn Văn Tài
+
 Báo cáo trình bày cách AI coding agent xử lý một nhiệm vụ lập trình và phân tích OpenCode qua các thành phần chính như vòng lặp agent, công cụ, ngữ cảnh và quyền thực thi. Nội dung dựa trên tài liệu kỹ thuật và mã nguồn tại các commit được dẫn kèm. Phần cài đặt, so sánh phiên bản và thực nghiệm được trình bày trong [Báo cáo 2](REPORT_TASK2.md).
 
 ## 1. AI Coding Agent

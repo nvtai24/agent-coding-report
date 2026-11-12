@@ -1,5 +1,9 @@
 # Báo cáo 2 — So sánh OpenCode, Pi và Codex CLI
 
+**Tên report:** So sánh OpenCode, Pi và Codex CLI
+
+**Người thực hiện:** Nguyễn Văn Tài
+
 Báo cáo so sánh OpenCode, Pi và Codex CLI theo kiến trúc và cơ chế hoạt động, khảo sát sự thay đổi giữa OpenCode 1.x và 2.x, đồng thời đánh giá ba công cụ trên cùng một bộ nhiệm vụ. Các nhận định kỹ thuật có liên kết đến mã nguồn cụ thể; kết quả thực nghiệm đi kèm script, dữ liệu đầu vào, log và bản sửa để đối chiếu.
 
 ## 1. So sánh OpenCode, Pi và Codex CLI
